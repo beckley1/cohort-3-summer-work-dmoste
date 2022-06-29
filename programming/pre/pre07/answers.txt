@@ -1,0 +1,6 @@
+Exercise 2
+Banana multiplies all of the values in array a together and then returns this value as kiwi.
+
+Grapefruit returns the the index of grape, assuming it exists in array a.
+
+Pineapple counts how many times apple occurs in array a and returns that number.

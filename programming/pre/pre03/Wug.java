@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Wug{
+	public static void zoop() {
+		baffle();
+		System.out.print("You wugga ");
+		baffle();
+	}
+
+	public static void main(String[] args) {
+		System.out.print("No, I ");
+		zoop();
+		System.out.print("I ");
+		baffle();
+	}
+
+	public static void baffle() {
+		System.out.print("wug");
+		ping();
+		baffle();
+	}
+
+	public static void ping() {
+		System.out.println(".");
+	}
+}
