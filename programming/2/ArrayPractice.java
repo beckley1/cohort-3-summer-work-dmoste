@@ -207,7 +207,11 @@ public class ArrayPractice
   public static int countOdds( int[] data ) {
     int count = 0;
 
-    /* YOUR BRILLIANT CODE HERE */
+    for(int i = 0; i < data.length; i++){
+      if(data[i]%2 != 0){
+        count++;
+      }
+    }
 
     // Note the % operator is the modulo (basically remainder) function
     // in java. Use to determine if an integer is odd.
@@ -229,7 +233,13 @@ public class ArrayPractice
   */
   public static void flip( int[] data )
   {
-    /* YOUR BRILLIANT CODE HERE */
+    int[] newArray = new int[data.length];
+
+    for(int i = 0; i < data.length; i++){
+      newArray[i] = data[data.length - i - 1];
+    }
+
+    System.out.println(Arrays.toString(newArray));
   }
 
 
@@ -243,6 +253,7 @@ public class ArrayPractice
     int sum = arraySum(data3);
     boolean sorted = isSorted(data3);
     int m = findMaxValue(data3);
+    int odds = countOdds(data3);
     
     printArray(data);
     printArray(data2);
@@ -250,8 +261,8 @@ public class ArrayPractice
     System.out.println(sum);
     System.out.println(sorted);
     System.out.println(m);
-    
+    System.out.println(odds);
 
-    // add calls to show that the methods you write work.
+    flip(data3);
   }
 }
