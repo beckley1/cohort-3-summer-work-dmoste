@@ -183,10 +183,9 @@ public class ArrayPractice
      value of the largest element in the array
   */
   public static int findMaxValue( int[] data ) {
-    double negInf = Double.NEGATIVE_INFINITY;
-    int m = (int)negInf;
+    int m = data[0];
 
-    for(int i = 0; i < data.length; i++){
+    for(int i = 1; i < data.length; i++){
       if(data[i] > m){
         m = data[i];
       }
