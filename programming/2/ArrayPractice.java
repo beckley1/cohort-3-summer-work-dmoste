@@ -183,9 +183,14 @@ public class ArrayPractice
      value of the largest element in the array
   */
   public static int findMaxValue( int[] data ) {
-    int m;  // will hold the maximum value;
+    double negInf = Double.NEGATIVE_INFINITY;
+    int m = (int)negInf;
 
-    /* YOUR BRILLIANT CODE HERE */
+    for(int i = 0; i < data.length; i++){
+      if(data[i] > m){
+        m = data[i];
+      }
+    }
 
     return m;
   }
@@ -200,7 +205,7 @@ public class ArrayPractice
      will be 3 since three of the elements are odd.
   */
   public static int countOdds( int[] data ) {
-    int count;
+    int count = 0;
 
     /* YOUR BRILLIANT CODE HERE */
 
