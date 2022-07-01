@@ -1,7 +1,7 @@
 /**
- * ArrayPractice by Team BossCoders
- * First Last
- * collaborators: First Last, First Last
+ * ArrayPractice by...
+ * David Moste
+ * collaborators: Alicia Wade
  */
 
 /**
@@ -235,14 +235,22 @@ public class ArrayPractice
 
   public static void main( String[] args )
   {
-
-    // remove the comments as you complete each routine
-    // and add more lines as you add additional routines.
-
-    // int[] data = buildRandomArray(10, 20);
-    // int[] data2 = buildincreasingArray(10,5,3);
-    // printArray(data);
-    // printArray(data2);
+    int[] data3 = new int[]{1,5,2,7,5,8,5,12,19,5};
+    
+    int[] data = buildRandomArray(10, 20);
+    int[] data2 = buildIncreasingArray(10,5,3);
+    int first = firstOccurence(data3, 5);
+    int sum = arraySum(data3);
+    boolean sorted = isSorted(data3);
+    int m = findMaxValue(data3);
+    
+    printArray(data);
+    printArray(data2);
+    System.out.println(first);
+    System.out.println(sum);
+    System.out.println(sorted);
+    System.out.println(m);
+    
 
     // add calls to show that the methods you write work.
   }
