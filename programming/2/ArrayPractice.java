@@ -1,7 +1,7 @@
 /**
  * ArrayPractice by...
  * David Moste
- * collaborators: Alicia Wade
+ * collaborators: Alicia Wade, Sam Lojacono
  */
 
 /**
