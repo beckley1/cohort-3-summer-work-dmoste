@@ -100,7 +100,7 @@ public class ArrayPractice
       System.out.print(data[i] + " ");
     }
 
-    System.out.println();
+    System.out.println("");
   }
 
 
@@ -118,18 +118,13 @@ public class ArrayPractice
   */
   public static int firstOccurence( int[] data, int value )
   {
-    boolean found = false;
     int i = 0;
     
-    while(found == false){
-      if(data[i] == value){
-        found = true;
-      } else{
-          i++;
-      }
+    while(i < data.length && data[i] != value){
+      i++;
     }
     
-    if(found == false){
+    if(i == data.length){
       i = -1;
     }
 
@@ -145,9 +140,13 @@ public class ArrayPractice
   */
   public static int arraySum( int[] data )
   {
-    /* YOUR BRILLIANT CODE HERE */
+    int sum = 0;
 
-    return 0; // replace this
+    for(int i = 0; i < data.length; i++){
+      sum += data[i];
+    }
+
+    return sum;
   }
 
 
@@ -163,10 +162,18 @@ public class ArrayPractice
   */
   public static boolean isSorted( int[] data )
   {
-    /* YOUR BRILLIANT CODE HERE */
+    boolean sorted = true;
+    int i = 0;
+    
+    while(i < data.length-1 && data[i] <= data[i+1]){
+      i++;
+    }
+    
+    if(i < data.length-1){
+      sorted = false;
+    }
 
-    return true; // replace this
-
+    return sorted;
   }
 
   /**
