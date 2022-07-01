@@ -246,12 +246,14 @@ public class ArrayPractice
   public static void main( String[] args )
   {
     int[] data3 = new int[]{1,5,2,7,5,8,5,12,19,5};
+    int[] data4 = new int[]{1,2,7,8,12,19};
     
-    int[] data = buildRandomArray(10, 20);
+    int[] data = buildRandomArray(10,20);
     int[] data2 = buildIncreasingArray(10,5,3);
-    int first = firstOccurence(data3, 5);
+    int first = firstOccurence(data3,5);
     int sum = arraySum(data3);
-    boolean sorted = isSorted(data3);
+    boolean sortedF = isSorted(data3);
+    boolean sortedT = isSorted(data4);
     int m = findMaxValue(data3);
     int odds = countOdds(data3);
     
@@ -259,7 +261,8 @@ public class ArrayPractice
     printArray(data2);
     System.out.println(first);
     System.out.println(sum);
-    System.out.println(sorted);
+    System.out.println(sortedF);
+    System.out.println(sortedT);
     System.out.println(m);
     System.out.println(odds);
 
