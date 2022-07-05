@@ -146,10 +146,10 @@ public class Array2DPractice
      to explode an element on the edges.
   */
   public static void explodeSquare( char[][] board, int row, int col )
-  {
-    for(int i = row-1; i < row+2; i++){
+  { 
+    for(int i = row-1; i <= row+1; i++){
       if(i >= 0 && i < board.length){
-        for(int j = col-1; j < col+2; j++){
+        for(int j = col-1; j <= col+1; j++){
           if(j >= 0 && j < board[0].length){
             if(!(i == row && j == col)){
               board[i][j] = 'X';
@@ -177,7 +177,13 @@ public class Array2DPractice
   */
   public static void explodeAllChar(char[][] board, char c)
   {
-    /* YOUR AWESOME CODE HERE */
+    for(int row = 0; row < board.length; row++){
+      for(int col = 0; col < board[row].length; col++){
+        if(board[row][col] == c){
+          explodeSquare(board, row, col);
+        }
+      }
+    }
   }
 
 
@@ -218,7 +224,11 @@ public class Array2DPractice
   */
   public static void downString( char[][] board, int row, int col, String word )
   {
-    /* YOUR AWESOME CODE HERE */
+    for(int i = 0; i < board.length - row; i++){
+      if(i < word.length()){
+        board[i+row][col] = word.charAt(i);
+      }
+    }
   }
 
 
@@ -227,18 +237,27 @@ public class Array2DPractice
     System.out.println("Building our board");
     char[][] b = buildBoard(5,10,'z');
     printBoard(b);
+    System.out.println("");
     
     System.out.println("Changing a row");
     setRow(b,2,'a');
     printBoard(b);
+    System.out.println("");
     
     System.out.println("Printing a copy");
     char[][] c = copyBoard(b);
     printBoard(c);
+    System.out.println("");
 
     System.out.println("Exploding the square");
-    explodeSquare(c, 0, 0);
+    explodeSquare(c, 1, 9);
     printBoard(c);
+    System.out.println("");
+
+    System.out.println("Downstring welcome");
+    downString(c, 1, 2, "welcome");
+    printBoard(c);
+    System.out.println("");
     /*
       Note, you can directly set elements in the board
       using array notation like b[3][2]='z' and you
