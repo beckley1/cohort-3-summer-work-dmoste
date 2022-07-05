@@ -89,7 +89,9 @@ public class Array2DPractice
   */
   public static void setRow( char[][] board, int row, char value )
   {
-    /* YOUR AWESOME CODE HERE */
+    for(int j = 0; j < board[row].length; j++){
+      board[row][j] = value;
+    }
   }
 
 
@@ -212,10 +214,16 @@ public class Array2DPractice
 
   public static void main( String[] args )
   {
+    System.out.println("Building our board");
     char[][] b = buildBoard(5,10,'z');
     printBoard(b);
-    char[][] c = copyBoard(b);
+    
+    System.out.println("Changing a row");
+    setRow(b,2,'a');
+    printBoard(b);
+    
     System.out.println("Printing a copy");
+    char[][] c = copyBoard(b);
     printBoard(c);
     /*
       Note, you can directly set elements in the board
