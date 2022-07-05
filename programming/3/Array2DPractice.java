@@ -61,7 +61,7 @@ public class Array2DPractice
   {
     for(char[] row : board){
       for(char value : row){
-        System.out.print(value + " ");
+        System.out.print(value);
       }
       System.out.println("");
     }
