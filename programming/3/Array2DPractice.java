@@ -121,7 +121,7 @@ public class Array2DPractice
      row,col - ints specifying a location in board
      Returns:
      nothing
-     A location in a 2D array can be though of as having 6
+     A location in a 2D array can be thought of as having 8
      neighbors.  In the below 2D array, the neighbors of the element
      marked Q are the numbered elements.
      oooooo
@@ -147,7 +147,17 @@ public class Array2DPractice
   */
   public static void explodeSquare( char[][] board, int row, int col )
   {
-    /* YOUR AWESOME CODE HERE */
+    for(int i = row-1; i < row+2; i++){
+      if(i >= 0 && i < board.length){
+        for(int j = col-1; j < col+2; j++){
+          if(j >= 0 && j < board[0].length){
+            if(!(i == row && j == col)){
+              board[i][j] = 'X';
+            } 
+          }
+        } 
+      }
+    }
   }
 
   /**
@@ -224,6 +234,10 @@ public class Array2DPractice
     
     System.out.println("Printing a copy");
     char[][] c = copyBoard(b);
+    printBoard(c);
+
+    System.out.println("Exploding the square");
+    explodeSquare(c, 0, 0);
     printBoard(c);
     /*
       Note, you can directly set elements in the board
