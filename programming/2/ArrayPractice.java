@@ -235,7 +235,7 @@ public class ArrayPractice
     int[] newArray = new int[data.length];
 
     for(int i = 0; i < data.length; i++){
-      newArray[i] = data[data.length - i - 1];
+      newArray[i] = data[data.length - 1 - i];
     }
 
     System.out.println(Arrays.toString(newArray));
