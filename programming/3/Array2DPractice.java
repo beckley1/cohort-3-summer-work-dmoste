@@ -254,6 +254,11 @@ public class Array2DPractice
     printBoard(c);
     System.out.println("");
 
+    System.out.println("Exploding all z");
+    explodeAllChar(c, 'z');
+    printBoard(c);
+    System.out.println("");
+
     System.out.println("Downstring welcome");
     downString(c, 1, 2, "welcome");
     printBoard(c);
