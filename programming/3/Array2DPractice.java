@@ -224,9 +224,9 @@ public class Array2DPractice
   */
   public static void downString( char[][] board, int row, int col, String word )
   {
-    for(int i = 0; i < board.length - row; i++){
+    for(int i = 0; i < board.length-row; i++){
       if(i < word.length()){
-        board[i+row][col] = word.charAt(i);
+        board[row+i][col] = word.charAt(i);
       }
     }
   }
