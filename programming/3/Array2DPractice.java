@@ -215,6 +215,7 @@ public class Array2DPractice
     char[][] b = buildBoard(5,10,'z');
     printBoard(b);
     char[][] c = copyBoard(b);
+    System.out.println("Printing a copy");
     printBoard(c);
     /*
       Note, you can directly set elements in the board
