@@ -99,10 +99,12 @@ public class Array2DPractice
   */
   public static char[][] copyBoard( char[][] original )
   {
-    char[][] newBoard = new char[original.length][original[0].length];
+    int rows = original.length;
+    int cols = original[0].length;
+    char[][] newBoard = new char[rows][cols];
 
-    for(int i = 0; i < original.length; i++){
-      for(int j = 0; j < original[0].length; j++){
+    for(int i = 0; i < rows; i++){
+      for(int j = 0; j < cols; j++){
         newBoard[i][j] = original[i][j];
       }
     }
