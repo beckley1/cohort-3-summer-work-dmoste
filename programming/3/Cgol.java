@@ -29,7 +29,7 @@ public class Cgol
     
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        board[i][j] = '-';
+        board[i][j] = ' ';
       }
     }
     
@@ -92,7 +92,7 @@ public class Cgol
     }else if(neighbours == 2 && board[r][c] == 'X'){
       newState = 'X';
     }else{
-      newState = '-';
+      newState = ' ';
     }
 
     return newState;
@@ -127,7 +127,7 @@ public class Cgol
         if(rand.nextInt(100) < 20){
           setCell(board, i, j, 'X');
         }else{
-          setCell(board, i, j, '-');
+          setCell(board, i, j, ' ');
         }
       }
     }
@@ -135,7 +135,7 @@ public class Cgol
     for(int i = 0; i < 11; i++){
       System.out.printf("Gen %d\n", i);
       printBoard(board);
-      System.out.println("--------------------------\n\n");
+      System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - \n\n");
       board = generateNextBoard(board);
     }
   }//end main()
