@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * Conway's Game of Life by...
  * David Moste
- * collaborators: First Last, First Last
+ * collaborators: Taylor Grant-Knight, Jessica Novillo Argudo
  */
 
 /**
@@ -29,7 +29,7 @@ public class Cgol
     
     for (int i = 0; i < rows; i++) {
       for (int j = 0; j < cols; j++) {
-        board[i][j] = ' ';
+        board[i][j] = '-';
       }
     }
     
@@ -85,22 +85,16 @@ public class Cgol
   public static char getNextGenCell( char[][] board,int r, int c )
   {
     int neighbours = countNeighbours(board, r, c);
-    char currentState = board[r][c];
     char newState;
 
-    if(currentState == 'X'){
-      if(neighbours == 2 || neighbours == 3){
-        newState = 'X';
-      }else{
-        newState = ' ';
-      }
+    if(neighbours == 3){
+      newState = 'X';
+    }else if(neighbours == 2 && board[r][c] == 'X'){
+      newState = 'X';
     }else{
-      if(neighbours == 3){
-        newState = 'X';
-      }else{
-        newState = ' ';
-      }
+      newState = '-';
     }
+
     return newState;
   }
 
@@ -108,14 +102,15 @@ public class Cgol
   //generate and return a new board representing next generation
   public static char[][] generateNextBoard( char[][] board )
   {
-    char[][] copyBoard = new char[board.length][board[0].length];
+    char[][] newBoard = new char[board.length][board[0].length];
 
     for(int i = 0; i < board.length; i++){
       for(int j = 0; j < board[i].length; j++){
-        copyBoard[i][j] = getNextGenCell(board, i, j);
+        newBoard[i][j] = getNextGenCell(board, i, j);
       }
     }
-    return copyBoard;
+    
+    return newBoard;
   }
 
 
@@ -123,10 +118,20 @@ public class Cgol
   {
     char[][] board;
     board = createNewBoard(25,25);
+    
     //breathe life into some cells:
-    setCell(board, 0, 0, 'X');
-    setCell(board, 0, 1, 'X');
-    setCell(board, 1, 0, 'X');
+    Random rand = new Random();
+    
+    for(int i = 0; i < board.length; i++){
+      for(int j = 0; j < board[i].length; j++){
+        if(rand.nextInt(100) < 85){
+          setCell(board, i, j, '-');
+        }else{
+          setCell(board, i, j, 'X');
+        }
+      }
+    }
+    
     // TASK:
     // Once your initial version is running,
     // try out different starting configurations of living cells...
@@ -136,6 +141,10 @@ public class Cgol
     System.out.println("--------------------------\n\n");
     board = generateNextBoard(board);
     System.out.println("Gen X+1:");
+    printBoard(board);
+    System.out.println("--------------------------\n\n");
+    board = generateNextBoard(board);
+    System.out.println("Gen X+2:");
     printBoard(board);
     System.out.println("--------------------------\n\n");
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
