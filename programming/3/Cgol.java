@@ -113,6 +113,25 @@ public class Cgol
     return newBoard;
   }
 
+  public static void delay(int n)
+  {
+    try {
+      Thread.sleep(n);
+    }
+    catch(InterruptedException e) {}
+  }
+
+  public static void animate(char[][] board, int n)
+  {
+    //clear screen, place cursor at origin (upper left)
+    System.out.print("[0;0H\n");
+
+    System.out.printf("Gen %d\n", n);
+    printBoard(board);
+    System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - \n\n");
+
+    delay(500);
+  }
 
   public static void main( String[] args )
   {
@@ -133,9 +152,7 @@ public class Cgol
     }
 
     for(int i = 0; i < 11; i++){
-      System.out.printf("Gen %d\n", i);
-      printBoard(board);
-      System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - \n\n");
+      animate(board, i);
       board = generateNextBoard(board);
     }
   }//end main()
