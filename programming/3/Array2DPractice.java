@@ -180,7 +180,17 @@ public class Array2DPractice
     for(int row = 0; row < board.length; row++){
       for(int col = 0; col < board[row].length; col++){
         if(board[row][col] == c){
-          explodeSquare(board, row, col);
+          for(int i = row-1; i <= row+1; i++){
+            if(i >= 0 && i < board.length){
+              for(int j = col-1; j <= col+1; j++){
+                if(j >= 0 && j < board[0].length){
+                  if(board[i][j] != c && !(i == row && j == col)){
+                    board[i][j] = 'X';
+                  } 
+                }
+              } 
+            }
+          }
         }
       }
     }
