@@ -42,7 +42,7 @@ public class Cgol
   {
     for(char[] row : board){
       for(char value : row){
-        System.out.print(value);
+        System.out.print(value + " ");
       }
       System.out.println("");
     }
@@ -131,22 +131,13 @@ public class Cgol
         }
       }
     }
-    
-    // TASK:
-    // Once your initial version is running,
-    // try out different starting configurations of living cells...
-    // (Feel free to comment out the above three lines.)
-    System.out.println("Gen X:");
-    printBoard(board);
-    System.out.println("--------------------------\n\n");
-    board = generateNextBoard(board);
-    System.out.println("Gen X+1:");
-    printBoard(board);
-    System.out.println("--------------------------\n\n");
-    board = generateNextBoard(board);
-    System.out.println("Gen X+2:");
-    printBoard(board);
-    System.out.println("--------------------------\n\n");
+
+    for(int i = 0; i < 11; i++){
+      System.out.printf("Gen %d\n", i);
+      printBoard(board);
+      System.out.println("--------------------------\n\n");
+      board = generateNextBoard(board);
+    }
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
