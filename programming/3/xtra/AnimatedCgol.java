@@ -19,7 +19,7 @@ import java.util.*;
    NOTA BENE:  All births and deaths occur simultaneously. Together, they constitute a single generation.
 */
 
-public class Cgol
+public class AnimatedCgol
 {
 
   //create, initialize, and return  empty board (all cells dead)
@@ -128,8 +128,31 @@ public class Cgol
     }
   }
 
+  public static void delay(int n)
+  {
+    try {
+      Thread.sleep(n);
+    }
+    catch(InterruptedException e) {}
+  }
+
+  public static void animate(char[][] board, int n)
+  {
+    //place cursor at origin (upper left)
+    System.out.print("\033[0;0H\n");
+
+    System.out.printf("Generation %d\n", n);
+    printBoard(board);
+    System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - ");
+
+    delay(100);
+  }
+
   public static void main( String[] args )
   {
+    //clear the shell and hide the cursor
+    System.out.print("\033[2J\033[?25l");
+
     //create the board
     char[][] board;
     board = createNewBoard(25,25);
@@ -139,11 +162,12 @@ public class Cgol
 
     //generate and animate the generations
     for(int i = 0; i < 101; i++){
-      System.out.printf("Generation %d\n", i);
-      printBoard(board);
-      System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - \n\n");
+      animate(board, i);
       board = generateNextBoard(board);
     }
+
+    //show the cursor
+    System.out.print("\033[?25h");
   }//end main()
 
 }//end class
