@@ -113,6 +113,20 @@ public class Cgol
     return newBoard;
   }
 
+  public static void setBoard(char[][] board, int alivePerc){
+    Random rand = new Random();
+    
+    for(int i = 0; i < board.length; i++){
+      for(int j = 0; j < board[i].length; j++){
+        if(rand.nextInt(100) < alivePerc){
+          setCell(board, i, j, 'X');
+        }else{
+          setCell(board, i, j, ' ');
+        }
+      }
+    }
+  }
+
   public static void delay(int n)
   {
     try {
@@ -123,36 +137,30 @@ public class Cgol
 
   public static void animate(char[][] board, int n)
   {
-    //clear screen, place cursor at origin (upper left)
-    System.out.print("[0;0H\n");
+    //place cursor at origin (upper left)
+    System.out.print("\033[0;0H\n");
 
-    System.out.printf("Gen %d\n", n);
+    System.out.printf("Generation %d\n", n);
     printBoard(board);
-    System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - \n\n");
+    System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - ");
 
-    delay(500);
+    delay(100);
   }
 
   public static void main( String[] args )
   {
+    //clear the shell
     System.out.print("\033[H\033[2J");
+
+    //create the board
     char[][] board;
     board = createNewBoard(25,25);
     
-    //breathe life into some cells:
-    Random rand = new Random();
-    
-    for(int i = 0; i < board.length; i++){
-      for(int j = 0; j < board[i].length; j++){
-        if(rand.nextInt(100) < 20){
-          setCell(board, i, j, 'X');
-        }else{
-          setCell(board, i, j, ' ');
-        }
-      }
-    }
+    //breathe life into some cells
+    setBoard(board, 20);
 
-    for(int i = 0; i < 11; i++){
+    //generate and animate the generations
+    for(int i = 0; i < 101; i++){
       animate(board, i);
       board = generateNextBoard(board);
     }
