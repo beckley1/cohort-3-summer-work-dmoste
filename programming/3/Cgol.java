@@ -113,7 +113,8 @@ public class Cgol
     return newBoard;
   }
 
-  public static void setBoard(char[][] board, int alivePerc){
+  public static void setBoard(char[][] board, int alivePerc)
+  {
     Random rand = new Random();
     
     for(int i = 0; i < board.length; i++){
@@ -149,8 +150,8 @@ public class Cgol
 
   public static void main( String[] args )
   {
-    //clear the shell
-    System.out.print("\033[H\033[2J");
+    //clear the shell and hide the cursor
+    System.out.print("\033[2J\033[?25l");
 
     //create the board
     char[][] board;
@@ -164,6 +165,9 @@ public class Cgol
       animate(board, i);
       board = generateNextBoard(board);
     }
+
+    //show the cursor
+    System.out.print("\033[?25h");
   }//end main()
 
 }//end class
