@@ -124,10 +124,10 @@ public class Cgol
     
     for(int i = 0; i < board.length; i++){
       for(int j = 0; j < board[i].length; j++){
-        if(rand.nextInt(100) < 80){
-          setCell(board, i, j, '-');
-        }else{
+        if(rand.nextInt(100) < 20){
           setCell(board, i, j, 'X');
+        }else{
+          setCell(board, i, j, '-');
         }
       }
     }
