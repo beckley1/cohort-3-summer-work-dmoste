@@ -137,7 +137,7 @@ public class Cgol
     //breathe life into some cells
     setBoard(board, 20);
 
-    //generate and animate the generations
+    //generate the generations
     for(int i = 0; i < 101; i++){
       System.out.printf("Generation %d\n", i);
       printBoard(board);
