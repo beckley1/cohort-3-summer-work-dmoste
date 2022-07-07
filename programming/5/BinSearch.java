@@ -30,22 +30,22 @@ public class BinSearch
   {
     int tPos = -1; //init return var to flag/signal value
 
-    int mPos = (lo + hi) / 2; //init tracker var for middle position
+    int mPos = (loPos + hiPos) / 2; //init tracker var for middle position
 
     //exit case. If lo & hi have crossed, target not present
     if ( /* YOUR SMART CODE HERE */ )
       return /* YOUR SMART CODE HERE */ ;
 
     // target found
-    if ( /* YOUR SMART CODE HERE */ ) {
-      /* YOUR SMART CODE HERE */
+    if ( a[mPos] == target ) {
+      tPos = mPos;
     }
     // value at mid index higher than target
-    else if ( /* YOUR SMART CODE HERE */ ) {
+    else if ( a[mPos] > target ) {
       /* YOUR SMART CODE HERE */
     }
     // value at mid index lower than target
-    else if ( /* YOUR SMART CODE HERE */ ) {
+    else if ( a[mPos] < target ) {
       /* YOUR SMART CODE HERE */
     }
 
