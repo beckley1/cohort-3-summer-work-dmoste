@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Time class by...
  * David Moste
- * collaborators: First Last, First Last
+ * collaborators: Stacy Goldsteinn, Yeidy Levels, Usman Ahmed
  */
 
 /**
@@ -34,17 +34,15 @@ public class Time {
     // Instance Variable(s)
     // You can change this if you want to use the alternate
     // implementation of just storing the overall seconds.
-    
-    private int hours;
-    private int minutes;
-    private int seconds;
+  private int hours;
+  private int minutes;
+  private int seconds;
 
     // Constructors
     public Time(){
-	    this.hours = 0;
-	    this.minutes = 0;
+      this.hours = 0;
+      this.minutes = 0;
 	    this.seconds = 0;
-	
     }
 
     /**
@@ -54,9 +52,9 @@ public class Time {
        
      */
     public Time(int hrs, int mins, int secs){
-
-	// your code here
-	
+      this.hours = hrs;
+      this.minutes = mins;
+  	  this.seconds = secs;
     }
     
     
@@ -66,7 +64,7 @@ public class Time {
        returns a string representation of the time
     */
     public String toString(){
-	return("This should be changed to return the time in a nice form");
+	    return(String.valueOf(this.hours) + ":" + String.valueOf(this.minutes) + ":" + String.valueOf(this.seconds));
     }
 
 
@@ -78,9 +76,11 @@ public class Time {
        modifies this instance to represent the time hrs:mins:secs
     */
     public void set(int hrs, int mins, int secs){
-	// add the code to add the time represented by other
-	// to this instance.
-
+	    // add the code to add the time represented by other
+	    // to this instance.
+      this.hours = hrs;
+      this.minutes = mins;
+      this.seconds = secs;
     }
 
     
@@ -94,7 +94,23 @@ public class Time {
     public void add(Time other){
 	// add the code to add the time represented by other
 	// to this instance.
+      this.seconds += other.seconds;
+      this.minutes += other.minutes;
+      this.hours += other.hours;
 
+      if(this.seconds >= 60){
+        this.seconds -= 60;
+        this.minutes++;
+      }
+
+      if(this.minutes >= 60){
+        this.minutes -= 60;
+        this.hours++;
+      }
+
+      if(this.hours >= 24){
+        this.hours -= 24;
+      }
     }
 
 
