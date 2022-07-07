@@ -1,7 +1,7 @@
 /**
  * Binary Search by Team Did You Mean Recursion?
  * First Last
- * collaborators: First Last, First Last
+ * collaborators: Stacy Goldsteinn, Yeidy Levels, Usman Ahmed
  */
 
 /**
@@ -33,8 +33,9 @@ public class BinSearch
     int mPos = (loPos + hiPos) / 2; //init tracker var for middle position
 
     //exit case. If lo & hi have crossed, target not present
-    if ( /* YOUR SMART CODE HERE */ )
-      return /* YOUR SMART CODE HERE */ ;
+    if ( loPos > hiPos ){
+     return tPos; 
+    }
 
     // target found
     if ( a[mPos] == target ) {
@@ -42,11 +43,11 @@ public class BinSearch
     }
     // value at mid index higher than target
     else if ( a[mPos] > target ) {
-      /* YOUR SMART CODE HERE */
+      return binSearchRec(a, target, loPos, mPos-1);
     }
     // value at mid index lower than target
     else if ( a[mPos] < target ) {
-      /* YOUR SMART CODE HERE */
+      return binSearchRec(a, target, mPos+1, hiPos);
     }
 
     return tPos;
@@ -87,7 +88,7 @@ public class BinSearch
   public static void main ( String[] args )
   {
     //move the bar down to uncover tests in succession...
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ 
     System.out.println("\nNow testing binSearch on int array...");
     //Declare and initialize array of ints
     int[] iArr = { 2, 4, 6, 8, 6, 42 };
@@ -117,7 +118,6 @@ public class BinSearch
     System.out.println( binSearch(iArr3,5) );
     //search for 43 in array
     System.out.println( binSearch(iArr3,43) );
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
     /* YOUR SMART CODE HERE :: Feel free to add extra tests...*/
 

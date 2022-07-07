@@ -35,15 +35,15 @@ public class Time {
     // You can change this if you want to use the alternate
     // implementation of just storing the overall seconds.
     
-    int hours;
-    int minutes;
-    int seconds;
+    private int hours;
+    private int minutes;
+    private int seconds;
 
     // Constructors
     public Time(){
-	this.hours = 0;
-	this.minutes = 0;
-	this.seconds = 0;
+	    this.hours = 0;
+	    this.minutes = 0;
+	    this.seconds = 0;
 	
     }
 

@@ -1,7 +1,7 @@
 /**
  * Recursion Practice with Strings by...
  * David Moste
- * collaborators: First Last, First Last
+ * collaborators: Stacy Goldsteinn, Yeidy Levels, Usman Ahmed
  */
 
 public class Fence
