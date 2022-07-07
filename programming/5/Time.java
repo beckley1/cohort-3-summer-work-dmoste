@@ -122,9 +122,11 @@ public class Time {
        false otherwise.
     */
     public boolean equals(Time other){
-	// your code here)
-
-	return false; // change this
+	    if(this.hours == other.hours && this.minutes == other.minutes && this.seconds == other.seconds){
+        return true;
+      }else{
+        return false;
+      }
     }
 
     /**
@@ -138,7 +140,13 @@ public class Time {
        0 if the two instances represent the same time.
     */
     public int compareTo(Time other){
-	// your code here)
+      if(this.hours > other.hours){
+        return 1;
+      } else if(this.hours == other.hours){
+        if(this.minutes > other.minutes){
+          return 1;
+        }
+      }
 
 	return 0; // change this
     }

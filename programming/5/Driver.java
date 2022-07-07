@@ -30,13 +30,16 @@ public class Driver {
 	    t = new Time();
       o = new Time();
 
-      System.out.println(t.toString());
       t.set(5, 20, 35);
       System.out.println(t.toString());
 
       o.set(20, 20, 32);
       t.add(o);
       System.out.println(t.toString());
+
+      o.set(1, 41, 7);
+      boolean isEqual = t.equals(o);
+      System.out.println(isEqual);
     }//end main()
 
 }//end class
