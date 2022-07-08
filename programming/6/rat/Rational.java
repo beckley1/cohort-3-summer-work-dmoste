@@ -89,8 +89,10 @@ public class Rational
   // same as multiply, except operation is division
   public void divide( Rational r )
   {
-    this._numerator *= r._denominator;
-    this._denominator *= r._numerator;
+    if(r._numerator != 0){
+      this._numerator *= r._denominator;
+      this._denominator *= r._numerator; 
+    }
   }
 
 }//end class
