@@ -48,10 +48,10 @@ public class SuperArray
   public SuperArray()
   {
     //init underlying/inner storage of capacity 10
-    int[] data = new int[10];
+    data = new int[10];
 
     //init instance vars
-    numberElements = 10;
+    numberElements = 0;
   }
 
 
@@ -66,14 +66,16 @@ public class SuperArray
        Implement the rest of this method first,
        then only write this section once the rest is tested and working.
     */
-    /* YOUR SIMPLE+SMART CODE HERE */
+    if(numberElements+1 >= data.length){
+      grow();
+    }
 
     // add item
-    /* YOUR SIMPLE+SMART CODE HERE */
+   data[numberElements] = value;
 
 
     // increment numberElements
-    /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements ++;
 
   }//end add()
 
@@ -81,21 +83,29 @@ public class SuperArray
   public boolean isEmpty()
   {
     //return whether this SuperArray instance is empty
-    /* YOUR SIMPLE+SMART CODE HERE */
+    if(numberElements == 0){
+      return true;
+    }else{
+      return false;
+    }
   }
 
 
   public int get(int index)
   {
-    return data[index];
+    if(index < numberElements){
+      return data[index];
+    }else{
+      return -1;
+    }
   }
 
 
   public String toString()
   {
-    String asString;
+    String asString = new String();
     
-    for(int i = 0; i < data.length; i++){
+    for(int i = 0; i < numberElements; i++){
       asString = asString + data[i] + ", ";
     }
 
@@ -121,7 +131,7 @@ public class SuperArray
 
   public void remove(int index)
   {
-    for(int i = index+1; i < data.length; i++){
+    for(int i = index+1; i < numberElements; i++){
       data[i-1] = data[i];
     }
 
@@ -132,9 +142,13 @@ public class SuperArray
   public void add(int index, int value)
   {
     // see if there's enough room
-    if(index < data.length){
-      // shift elements toward the end of the array
-      for(int i = data.length-1; i <= index; i--){
+    if(numberElements+1 >= data.length){
+      grow();
+    }
+
+    // shift elements toward the end of the array
+    for(int i = numberElements; i >= index; i--){
+      if(i >= 1){
         data[i] = data[i-1];
       }
     }
@@ -151,14 +165,16 @@ public class SuperArray
   {
     // create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
-    /* YOUR SIMPLE+SMART CODE HERE */
+    int[] newData = new int[data.length + 1];
 
     // copy over all the elements from the old array to the new one
-    /* YOUR SIMPLE+SMART CODE HERE */
+    for(int i = 0; i < data.length; i++){
+      newData[i] = data[i];
+    }
 
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
-    /* YOUR SIMPLE+SMART CODE HERE */
+    data = newData;
   }//end grow()
 
 }//end class
