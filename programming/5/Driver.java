@@ -31,11 +31,11 @@ public class Driver {
       o = new Time();
 
       t.set(5, 20, 35);
-      System.out.println(t.toString());
+      System.out.println(t);
 
       o.set(20, 20, 32);
       t.add(o);
-      System.out.println(t.toString());
+      System.out.println(t);
 
       o.set(1, 40, 7);
       boolean isEqual = t.equals(o);
