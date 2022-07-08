@@ -37,10 +37,10 @@ public class SuperArray
   public SuperArray( int size )
   {
     //init underlying/inner storage of specified capacity
-    int[] data = new int[size];
+    data = new int[size];
 
     //init instance vars
-    numberElements = size;
+    numberElements = 0;
 
   }
 
@@ -75,7 +75,7 @@ public class SuperArray
 
 
     // increment numberElements
-    numberElements ++;
+    numberElements++;
 
   }//end add()
 
@@ -135,7 +135,7 @@ public class SuperArray
       data[i-1] = data[i];
     }
 
-    numberElements -= 1;
+    numberElements--;
   }
 
 
@@ -157,7 +157,7 @@ public class SuperArray
     data[index] = value;
 
     // increment numElements
-    numberElements += 1;
+    numberElements++;
   }
 
 
