@@ -1,7 +1,7 @@
 /**
  * SuperArray by...
  * David Moste
- * collaborators: First Last, First Last
+ * collaborators: Adam Driggers, Elizabeth Rechtin
  */
 
 /**
