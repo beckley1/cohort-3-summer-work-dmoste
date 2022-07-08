@@ -134,7 +134,7 @@ public class SuperArray
     // see if there's enough room
     if(index < data.length){
       // shift elements toward the end of the array
-      for(int i = data.length-1 i =< index; i--){
+      for(int i = data.length-1; i <= index; i--){
         data[i] = data[i-1];
       }
     }
