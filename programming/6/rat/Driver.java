@@ -15,9 +15,11 @@ public class Driver
       Rational v = new Rational( 2, 3 );
       Rational w = new Rational( 8, 12 );
       Rational x = new Rational( 8, 12 );
+      Rational z = new Rational( 5, 0 );
       System.out.println("r: " + r );
       System.out.println("s: " +  s );
       System.out.println("t: " +  t );
+      System.out.println("z: " + z );
       System.out.println( r + " as a floating pt approximation: "
       + r.floatValue() );
       System.out.println( s + " as a floating pt approximation: "
