@@ -92,6 +92,8 @@ public class Rational
     if(r._numerator != 0){
       this._numerator *= r._denominator;
       this._denominator *= r._numerator; 
+    }else{
+      System.out.println("Invalid division");
     }
   }
 
