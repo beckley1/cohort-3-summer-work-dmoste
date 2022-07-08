@@ -103,10 +103,10 @@ public class SuperArray
 
   public String toString()
   {
-    String asString = new String();
+    String asString = new String("" + data[0]);
     
-    for(int i = 0; i < numberElements; i++){
-      asString = asString + data[i] + ", ";
+    for(int i = 1; i < numberElements; i++){
+      asString = asString + ", " + data[i];
     }
 
     return asString;
