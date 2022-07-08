@@ -18,7 +18,6 @@ public class Driver
       System.out.println("r: " + r );
       System.out.println("s: " +  s );
       System.out.println("t: " +  t );
-    /*~~~~~v~~~~~~~~~~down~goer~3~~~~~~~~~~~~~v~~~~~
       System.out.println( r + " as a floating pt approximation: "
       + r.floatValue() );
       System.out.println( s + " as a floating pt approximation: "
@@ -31,7 +30,6 @@ public class Driver
       System.out.print( r + " / " + t + " = ");
       r.divide(t);
       System.out.println(r);
-      ~~~~~|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|~~~~~*/
   }
 
 }//end class

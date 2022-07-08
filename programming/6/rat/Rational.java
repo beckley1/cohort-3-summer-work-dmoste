@@ -68,7 +68,7 @@ public class Rational
   // uses the most precise floating point primitive
   public double floatValue()
   {
-    return 0.0;
+    return (double)this._numerator/this._denominator;
   }
 
 
@@ -80,7 +80,8 @@ public class Rational
   // need not reduce
   public void multiply( Rational r )
   {
-    /* YOUR ELEGANT CODE HERE */
+    this._numerator *= r._numerator;
+    this._denominator *= r._denominator;
   }
 
 
@@ -88,7 +89,8 @@ public class Rational
   // same as multiply, except operation is division
   public void divide( Rational r )
   {
-    /* YOUR ELEGANT CODE HERE */
+    this._numerator *= r._denominator;
+    this._denominator *= r._numerator;
   }
 
 }//end class
