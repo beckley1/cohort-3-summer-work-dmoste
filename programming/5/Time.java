@@ -145,10 +145,20 @@ public class Time {
       } else if(this.hours == other.hours){
         if(this.minutes > other.minutes){
           return 1;
+        } else if(this.minutes == other.minutes){
+          if(this.seconds > other.seconds){
+            return 1;
+          }else if(this.seconds == other.seconds){
+            return 0;
+          }else{
+            return -1;
+          }
+        }else{
+          return -1;
         }
+      }else{
+        return -1;
       }
-
-	return 0; // change this
     }
     
 

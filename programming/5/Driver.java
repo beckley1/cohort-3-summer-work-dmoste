@@ -37,9 +37,12 @@ public class Driver {
       t.add(o);
       System.out.println(t.toString());
 
-      o.set(1, 41, 7);
+      o.set(1, 40, 7);
       boolean isEqual = t.equals(o);
       System.out.println(isEqual);
+
+      int compare = t.compareTo(o);
+      System.out.println(compare);
     }//end main()
 
 }//end class
