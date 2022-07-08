@@ -48,10 +48,10 @@ public class SuperArray
   public SuperArray()
   {
     //init underlying/inner storage of capacity 10
-        /* YOUR SIMPLE+SMART CODE HERE */
+    int[] data = new int[10];
 
     //init instance vars
-        /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements = 10;
   }
 
 
@@ -87,15 +87,19 @@ public class SuperArray
 
   public int get(int index)
   {
-    //return item at index
-    /* YOUR SIMPLE+SMART CODE HERE */
+    return data[index];
   }
 
 
   public String toString()
   {
-    //return stringified version of this Object
-    /* YOUR SIMPLE+SMART CODE HERE */
+    String asString;
+    
+    for(int i = 0; i < data.length; i++){
+      asString = asString + data[i] + ", ";
+    }
+
+    return asString;
   }//end toString()
 
 
@@ -117,27 +121,29 @@ public class SuperArray
 
   public void remove(int index)
   {
-    // shift items down to remove the item at index
-    /* YOUR SIMPLE+SMART CODE HERE */
+    for(int i = index+1; i < data.length; i++){
+      data[i-1] = data[i];
+    }
 
-    // subtract fom numElements;
-    /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements -= 1;
   }
 
 
   public void add(int index, int value)
   {
     // see if there's enough room
-    /* YOUR SIMPLE+SMART CODE HERE */
-
-    // shift elements toward the end of the array
-    /* YOUR SIMPLE+SMART CODE HERE */
+    if(index < data.length){
+      // shift elements toward the end of the array
+      for(int i = data.length-1 i =< index; i--){
+        data[i] = data[i-1];
+      }
+    }
 
     // insert new element
-    /* YOUR SIMPLE+SMART CODE HERE */
+    data[index] = value;
 
     // increment numElements
-    /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements += 1;
   }
 
 
