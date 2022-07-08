@@ -49,7 +49,7 @@ public class Rational
     }else{
       this._numerator = 0;
       this._denominator = 1;
-      System.out.println("Your denominator is invalid. The numeraotr has been set to 0 and the denominator has been set to 1.");
+      System.out.println("Your denominator is invalid. The numerator has been set to 0 and the denominator has been set to 1.");
     }
 
   }
