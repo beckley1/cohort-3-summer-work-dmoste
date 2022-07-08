@@ -59,7 +59,7 @@ public class Rational
   // returns a string representation of the rational number (formatting of your choice)
   public String toString()
   {
-    return "" + this._numerator + "/" + this._denominator;
+    return this._numerator + "/" + this._denominator;
   }
 
 

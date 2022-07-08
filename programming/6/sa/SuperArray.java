@@ -1,6 +1,6 @@
 /**
- * SuperArray by Team MarvelvsDC
- * First Last
+ * SuperArray by...
+ * David Moste
  * collaborators: First Last, First Last
  */
 
@@ -37,10 +37,10 @@ public class SuperArray
   public SuperArray( int size )
   {
     //init underlying/inner storage of specified capacity
-    /* YOUR SIMPLE+SMART CODE HERE */
+    int[] data = new int[size];
 
     //init instance vars
-    /* YOUR SIMPLE+SMART CODE HERE */
+    numberElements = size;
 
   }
 
