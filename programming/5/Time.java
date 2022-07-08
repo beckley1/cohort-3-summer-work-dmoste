@@ -64,7 +64,7 @@ public class Time {
        returns a string representation of the time
     */
     public String toString(){
-	    return("" + this.hours + ":" + this.minutes + ":" + this.seconds);
+	    return(this.hours + ":" + this.minutes + ":" + this.seconds);
     }
 
 
