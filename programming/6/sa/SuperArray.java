@@ -66,7 +66,7 @@ public class SuperArray
        Implement the rest of this method first,
        then only write this section once the rest is tested and working.
     */
-    if(numberElements+1 >= data.length){
+    if(data.length <= numberElements){
       grow();
     }
 
@@ -142,15 +142,13 @@ public class SuperArray
   public void add(int index, int value)
   {
     // see if there's enough room
-    if(numberElements+1 >= data.length){
+    if(data.length <= numberElements){
       grow();
     }
 
     // shift elements toward the end of the array
-    for(int i = numberElements; i >= index; i--){
-      if(i >= 1){
-        data[i] = data[i-1];
-      }
+    for(int i = 0; i < numberElements-index; i++){
+      data[numberElements-i] = data[numberElements-i-1];
     }
 
     // insert new element
@@ -165,7 +163,7 @@ public class SuperArray
   {
     // create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
-    int[] newData = new int[data.length + 1];
+    int[] newData = new int[data.length + 5];
 
     // copy over all the elements from the old array to the new one
     for(int i = 0; i < data.length; i++){
