@@ -59,13 +59,6 @@ public class SuperArray
   public void add( int value )
   {
     // test to see if we need to grow, then grow
-    /**
-       IMPORTANT:
-       This is the first code that should run in this method
-       but the last code you should write.
-       Implement the rest of this method first,
-       then only write this section once the rest is tested and working.
-    */
     if(data.length <= numberElements){
       grow();
     }
