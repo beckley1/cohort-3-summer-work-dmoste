@@ -143,21 +143,26 @@ public class SuperArray
 
   public void add(int index, int value)
   {
-    // see if there's enough room
-    if(data.length <= numberElements){
-      grow();
+    //check if the index is reasonable
+    if(index < numberElements + 5){
+      // see if there's enough room
+      if(data.length <= numberElements){
+        grow();
+      }
+  
+      // shift elements toward the end of the array
+      for(int i = 0; i < numberElements-index; i++){
+        data[numberElements-i] = data[numberElements-i-1];
+      }
+  
+      // insert new element
+      data[index] = value;
+  
+      // increment numElements
+      numberElements++;
+    }else{
+      System.out.println("This is an unreasonable index");
     }
-
-    // shift elements toward the end of the array
-    for(int i = 0; i < numberElements-index; i++){
-      data[numberElements-i] = data[numberElements-i-1];
-    }
-
-    // insert new element
-    data[index] = value;
-
-    // increment numElements
-    numberElements++;
   }
 
 
