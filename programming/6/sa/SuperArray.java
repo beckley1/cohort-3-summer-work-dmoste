@@ -161,7 +161,7 @@ public class SuperArray
       // increment numElements
       numberElements++;
     }else{
-      System.out.println("This is an unreasonable index");
+      System.out.printf("You're trying to add a value at index %d. This is unreasonable.\n", index);
     }
   }
 
