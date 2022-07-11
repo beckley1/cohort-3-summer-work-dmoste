@@ -76,11 +76,7 @@ public class SuperArray
   public boolean isEmpty()
   {
     //return whether this SuperArray instance is empty
-    if(numberElements == 0){
-      return true;
-    }
-    
-    return false;
+    return numberElements == 0;
   }
 
 
@@ -97,13 +93,20 @@ public class SuperArray
 
   public String toString()
   {
-    //create placeholder string and add the first value
-    String asString = new String("" + data[0]);
+    //create placeholder string and add an opening bracket
+    String asString = new String("[");
 
     //loop through all remaining elements
-    for(int i = 1; i < numberElements; i++){
-      asString = asString + ", " + data[i];
+    for(int i = 0; i < numberElements; i++){
+      if(i < numberElements - 1){
+        asString = asString + data[i] + ", ";
+      }else{
+        asString = asString+ data[i];
+      }
     }
+
+    //close the brackets
+    asString = asString + "]";
 
     return asString;
   }//end toString()
