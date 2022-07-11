@@ -93,20 +93,21 @@ public class SuperArray
 
   public int get(int index)
   {
-    //check if index exists
+    //check if index exists and return the value if it does
     if(index < numberElements){
       return data[index];
-    }else{
-      return -1;
     }
+    
+    return -1;
   }
 
 
   public String toString()
   {
+    //create placeholder string and add the first value
     String asString = new String("" + data[0]);
 
-    //loop through all elements
+    //loop through all remaining elements
     for(int i = 1; i < numberElements; i++){
       asString = asString + ", " + data[i];
     }
@@ -133,10 +134,13 @@ public class SuperArray
 
   public void remove(int index)
   {
+    //loop through all elements
     for(int i = index+1; i < numberElements; i++){
+      //slide elements left
       data[i-1] = data[i];
     }
 
+    //reduce number of elements
     numberElements--;
   }
 
