@@ -36,6 +36,7 @@ public class SuperArrayDriver
     System.out.println(sa);
     sa.remove(15);
     System.out.println(sa);
+    System.out.println("\nTesting adding at index 1000");
     sa.add(2000, 5);
 
   }//main
