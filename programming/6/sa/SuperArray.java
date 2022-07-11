@@ -94,21 +94,21 @@ public class SuperArray
   public String toString()
   {
     //create placeholder string and add an opening bracket
-    String asString = new String("[");
+    String printString = new String("[");
 
     //loop through all remaining elements
     for(int i = 0; i < numberElements; i++){
       if(i < numberElements - 1){
-        asString = asString + data[i] + ", ";
+        printString += data[i] + ", ";
       }else{
-        asString = asString+ data[i];
+        printString += data[i];
       }
     }
 
     //close the brackets
-    asString = asString + "]";
+    printString += "]";
 
-    return asString;
+    return printString;
   }//end toString()
 
 
@@ -165,16 +165,16 @@ public class SuperArray
   {
     // create a new array with extra space
     // Q: How did you decide how much to increase capacity by?
-    int[] newData = new int[data.length + 5];
+    int[] temp = new int[data.length + 5];
 
     // copy over all the elements from the old array to the new one
     for(int i = 0; i < data.length; i++){
-      newData[i] = data[i];
+      temp[i] = data[i];
     }
 
     // point data to the new array
     // Q: How does this look when illustrated using encapsulation diagram?
-    data = newData;
+    data = temp;
   }//end grow()
 
 }//end class
