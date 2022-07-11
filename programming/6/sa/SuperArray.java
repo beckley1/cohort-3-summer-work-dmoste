@@ -131,9 +131,9 @@ public class SuperArray
   public void remove(int index)
   {
     //loop through all elements above the index value
-    for(int i = index+1; i < numberElements; i++){
+    for(int i = index; i < numberElements-1; i++){
       //slide elements left
-      data[i-1] = data[i];
+      data[i] = data[i+1];
     }
 
     //reduce number of elements
