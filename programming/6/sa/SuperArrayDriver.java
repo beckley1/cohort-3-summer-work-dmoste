@@ -44,10 +44,10 @@ public class SuperArrayDriver
     sa.remove(15);
     System.out.println(sa);
     
-    System.out.println("\nTesting removing at index 50\n");
+    System.out.println("\nTesting removing at index 50");
     sa.remove(50);
 
-    System.out.println("Testing overload constructor.");
+    System.out.println("\nTesting overload constructor.");
     SuperArray osa = new SuperArray(5);
     System.out.println("Testing empty print:");
     System.out.println(osa);
