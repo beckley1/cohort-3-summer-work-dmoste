@@ -85,14 +85,15 @@ public class SuperArray
     //return whether this SuperArray instance is empty
     if(numberElements == 0){
       return true;
-    }else{
-      return false;
     }
+    
+    return false;
   }
 
 
   public int get(int index)
   {
+    //check if index exists
     if(index < numberElements){
       return data[index];
     }else{
@@ -104,7 +105,8 @@ public class SuperArray
   public String toString()
   {
     String asString = new String("" + data[0]);
-    
+
+    //loop through all elements
     for(int i = 1; i < numberElements; i++){
       asString = asString + ", " + data[i];
     }
