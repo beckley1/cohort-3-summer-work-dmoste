@@ -59,7 +59,7 @@ public class SuperArray
   public void add( int value )
   {
     // test to see if we need to grow, then grow
-    if(data.length <= numberElements){
+    if(data.length == numberElements){
       grow();
     }
 
@@ -146,7 +146,7 @@ public class SuperArray
     //check if the index is reasonable
     if(index < numberElements + 5){
       // see if there's enough room
-      if(data.length <= numberElements){
+      if(data.length == numberElements){
         grow();
       }
   
