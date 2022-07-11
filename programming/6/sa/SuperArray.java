@@ -130,14 +130,18 @@ public class SuperArray
 
   public void remove(int index)
   {
-    //loop through all elements above the index value
-    for(int i = index; i < numberElements-1; i++){
-      //slide elements left
-      data[i] = data[i+1];
+    if(index <= numberElements){
+      //loop through all elements above the index value
+      for(int i = index; i < numberElements-1; i++){
+        //slide elements left
+        data[i] = data[i+1];
+      }
+  
+      //reduce number of elements
+      numberElements--;
+    }else{
+      System.out.printf("Can't remove item at index %d outside of the super array.\n", index);
     }
-
-    //reduce number of elements
-    numberElements--;
   }
 
 
