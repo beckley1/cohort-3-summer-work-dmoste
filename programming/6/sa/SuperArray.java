@@ -130,7 +130,7 @@ public class SuperArray
 
   public void remove(int index)
   {
-    //loop through all elements
+    //loop through all elements above the index value
     for(int i = index+1; i < numberElements; i++){
       //slide elements left
       data[i-1] = data[i];
