@@ -23,6 +23,7 @@ public class SuperArrayDriver
     System.out.println(sa.isEmpty());
     System.out.println("\nTesting add at index 5, 0 and 17(end)");
     sa.add(5, 100);
+    System.out.println("The value at index 5 is " + sa.get(5));
     System.out.println(sa);
     sa.add(0, 100);
     System.out.println(sa);
