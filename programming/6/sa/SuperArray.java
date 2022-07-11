@@ -153,10 +153,10 @@ public class SuperArray
       if(data.length == numberElements){
         grow();
       }
-  
+
       // shift elements toward the end of the array
-      for(int i = 0; i < numberElements-index; i++){
-        data[numberElements-i] = data[numberElements-i-1];
+      for(int i = numberElements-1; i >= index; i--){
+        data[i+1] = data[i];
       }
   
       // insert new element
