@@ -120,8 +120,10 @@ public class AlPractice{
   - The parameter ArrayLists should not be modified.
   */
   public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
+    //initialize a new ArrayList
     ArrayList<Integer> sums = new ArrayList<Integer>();
 
+    //add the items from each ArrayList together
     for(int i = 0; i < ListA.size(); i++){
       sums.add(ListA.get(i) + ListB.get(i));
     }
