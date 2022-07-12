@@ -48,12 +48,12 @@ public class AlPractice{
   - The sum of all of the elements of the ArrayList.
   */
   public static int sumOfList(ArrayList<Integer> dataList){
-    new int sum = 0;
+    int sum = 0;
 
     for(int i = 0; i < dataList.size(); i++){
       sum += dataList.get(i);
     }
-    return 0;//placeholder to compile.
+    return sum;//placeholder to compile.
   }
 
   /**
@@ -121,18 +121,20 @@ public class AlPractice{
     ArrayList<Integer> al;
 
     // Uncomment these to test buildRandomList
-    //al = buildRandomList(10,100);
-    //System.out.println(al);
+    al = buildRandomList(10,100);
+    System.out.println(al);
 
     // Uncomment these to test swapElements
     // swapElements(2,6);
     //System.out.println(al);
 
     // Uncomment these to test removeValue
-    // al.add(5);
-    // al.add(10);
-    // al.add(5);
-    // al.add(13);
+    al.add(5);
+    al.add(10);
+    al.add(5);
+    al.add(13);
+    System.out.println(al);
+    System.out.println(sumOfList(al));
     // al.set(2,5);
     // al.set(3,5);
     // System.out.println(a);
