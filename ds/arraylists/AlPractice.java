@@ -37,9 +37,11 @@ public class AlPractice{
     number between 0 and maxval (not including maxval).
   */
   public static ArrayList<Integer> buildRandomList(int size, int maxval){
-    Random rand = new Random();
+    //initialize and ArrayList of Integers and initialize a random number generator
     ArrayList<Integer> data = new ArrayList<Integer>();
+    Random rand = new Random();
 
+    //add random numbers from 0 to maxval-1
     for(int i = 0; i < size; i++){
       data.add(rand.nextInt(maxval));
     }
@@ -54,8 +56,10 @@ public class AlPractice{
   - The sum of all of the elements of the ArrayList.
   */
   public static int sumOfList(ArrayList<Integer> dataList){
+    //create a sum holder
     int sum = 0;
 
+    //loop through the elements of our ArrayList and add them to our sum holder
     for(int i = 0; i < dataList.size(); i++){
       sum += dataList.get(i);
     }
@@ -76,8 +80,10 @@ public class AlPractice{
   - No other values should be modified.
   */
   public static void swapElements(ArrayList<Integer> dataList, int index1,int index2){
+    //create a temporary holder for the element at index1
     int temp = dataList.get(index1);
-    
+
+    //swap the elements at index1 and index2
     dataList.set(index1, dataList.get(index2));
     dataList.set(index2, temp);
   }
@@ -90,9 +96,12 @@ public class AlPractice{
   - The dataList is modified such that all occurances of valueToRemove are removed.
   */
   public static void removeValue(ArrayList<Integer> dataList, int valueToRemove){
+    //loop through all the elements of our ArrayList
     for(int i = 0; i < dataList.size(); i++){
+      //remove elements if they match valueToRemove
       if(dataList.get(i) == valueToRemove){
         dataList.remove(i);
+        //go back one element so we don't skip any
         i--;
       }
     }
