@@ -50,8 +50,8 @@ public class AlPractice{
   public static int sumOfList(ArrayList<Integer> dataList){
     new int sum = 0;
 
-    for(int i : dataList){
-      sum += i;
+    for(int i = 0; i < dataList.size(); i++){
+      sum += dataList.get(i);
     }
     return 0;//placeholder to compile.
   }
