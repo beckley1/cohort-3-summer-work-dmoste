@@ -6,10 +6,12 @@ Basic level:
 ------------
 public static ArrayList<Integer> buildRandomList(int size, int maxval)
 public static int sumOfList(ArrayList<Integer> dataList)
+
 Intermediate level:
 -------------------
 public static void swapElements(ArrayList<Integer> dataList, int indexA,int indexB)
 public static void removeValue(ArrayList<Integer> dataList, int valueToRemove)
+
 Challenge level:
 -------------------
 public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
