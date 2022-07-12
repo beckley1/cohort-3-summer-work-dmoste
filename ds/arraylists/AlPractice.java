@@ -48,6 +48,11 @@ public class AlPractice{
   - The sum of all of the elements of the ArrayList.
   */
   public static int sumOfList(ArrayList<Integer> dataList){
+    new int sum = 0;
+
+    for(int i : dataList){
+      sum += i;
+    }
     return 0;//placeholder to compile.
   }
 
