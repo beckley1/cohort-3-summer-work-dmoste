@@ -125,11 +125,24 @@ public class AlPractice{
   public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
     ArrayList<Integer> zipped = new ArrayList<Integer>();
 
-    int length = ListA.size() > ListB.size() ? ListA.size() : ListB.size();
-
-    for(int i = 0; i < length; i++){
-      zipped.add(ListA.get(i));
-      zipped.add(ListB.get(i));
+    if(ListA.size() >= ListB.size()){
+      for(int i = 0; i < ListA.size(); i++){
+        if(i < ListB.size()){
+          zipped.add(ListA.get(i));
+          zipped.add(ListB.get(i));
+        }else{
+          zipped.add(ListA.get(i));
+        }
+      }
+    }else{
+      for(int i = 0; i < ListB.size(); i++){
+        if(i < ListA.size()){
+          zipped.add(ListA.get(i));
+          zipped.add(ListB.get(i));
+        }else{
+          zipped.add(ListB.get(i));
+        }
+      }
     }
     
     return zipped;
@@ -141,6 +154,8 @@ public class AlPractice{
   public static void main(String[] args) {
 
     ArrayList<Integer> al;
+    ArrayList<Integer> big = new ArrayList<Integer>();
+    ArrayList<Integer> small = new ArrayList<Integer>();
 
     // Uncomment these to test buildRandomList
     al = buildRandomList(10,100);
@@ -164,6 +179,16 @@ public class AlPractice{
     System.out.println(al);
 
     System.out.println(sumLists(al, al));
+
+    big.add(1);
+    big.add(2);
+    big.add(3);
+    big.add(4);
+    small.add(8);
+    small.add(9);
+    System.out.println(zipLists(big, small));
+    System.out.println(zipLists(small, big));
+    System.out.println(zipLists(big, big));
   }
 
 }
