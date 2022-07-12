@@ -1,6 +1,10 @@
 import java.io.*;
 import java.util.*;
 
+/*
+David Moste, Elizabeht Rechtin, Usman Ahmed, Erwin Lara
+*/
+
 /** Methods to write
 Basic level:
 ------------
@@ -35,7 +39,7 @@ public class AlPractice{
   public static ArrayList<Integer> buildRandomList(int size, int maxval){
     Random rand = new Random();
     ArrayList<Integer> data = new ArrayList<Integer>();
-    
+
     for(int i = 0; i < size; i++){
       data.add(rand.nextInt(maxval));
     }
@@ -55,7 +59,8 @@ public class AlPractice{
     for(int i = 0; i < dataList.size(); i++){
       sum += dataList.get(i);
     }
-    return sum;//placeholder to compile.
+    
+    return sum;
   }
 
   /**
@@ -72,6 +77,7 @@ public class AlPractice{
   */
   public static void swapElements(ArrayList<Integer> dataList, int index1,int index2){
     int temp = dataList.get(index1);
+    
     dataList.set(index1, dataList.get(index2));
     dataList.set(index2, temp);
   }
