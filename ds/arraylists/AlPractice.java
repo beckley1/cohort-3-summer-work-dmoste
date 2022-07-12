@@ -31,7 +31,14 @@ public class AlPractice{
     number between 0 and maxval (not including maxval).
   */
   public static ArrayList<Integer> buildRandomList(int size, int maxval){
-    return null;//placeholder to compile.
+    Random rand = new Random();
+    ArrayList<Integer> data = new ArrayList<Integer>();
+    
+    for(int i = 0; i < size; i++){
+      data.add(rand.nextInt(maxval));
+    }
+    
+    return data;
   }
 
   /**
