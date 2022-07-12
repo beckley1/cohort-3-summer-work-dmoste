@@ -10,7 +10,7 @@ Intermediate level:
 -------------------
 public static void swapElements(ArrayList<Integer> dataList, int indexA,int indexB)
 public static void removeValue(ArrayList<Integer> dataList, int valueToRemove)
-Advanced level:
+Challenge level:
 -------------------
 public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
 public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB)
