@@ -108,6 +108,7 @@ public class AlPractice{
     for(int i = 0; i < ListA.size(); i++){
       sums.add(ListA.get(i) + ListB.get(i));
     }
+    
     return sums;
   }
 
@@ -122,7 +123,16 @@ public class AlPractice{
   - The parameter ArrayLists should not be modified.
   */
   public static ArrayList<Integer> zipLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
-    return null;//placeholder to compile.
+    ArrayList<Integer> zipped = new ArrayList<Integer>();
+
+    int length = ListA.size() > ListB.size() ? ListA.size() : ListB.size();
+
+    for(int i = 0; i < length; i++){
+      zipped.add(ListA.get(i));
+      zipped.add(ListB.get(i));
+    }
+    
+    return zipped;
   }
 
 
