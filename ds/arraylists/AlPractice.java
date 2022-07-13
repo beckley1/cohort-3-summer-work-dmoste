@@ -121,13 +121,13 @@ public class AlPractice{
   */
   public static ArrayList<Integer> sumLists(ArrayList<Integer>ListA,ArrayList<Integer>ListB){
     //initialize a new ArrayList
-    ArrayList<Integer> sums = new ArrayList<Integer>();
+    ArrayList<Integer> sumList = new ArrayList<Integer>();
     
     //check precondition
     if(ListA.size() == ListB.size()){  
       //add the items from each ArrayList together
       for(int i = 0; i < ListA.size(); i++){
-        sums.add(ListA.get(i) + ListB.get(i));
+        sumList.add(ListA.get(i) + ListB.get(i));
       }
     }
 
