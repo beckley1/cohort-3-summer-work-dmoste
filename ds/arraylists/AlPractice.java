@@ -131,7 +131,7 @@ public class AlPractice{
       }
     }
 
-    return sums;
+    return sumList;
   }
 
   /** zipLists
