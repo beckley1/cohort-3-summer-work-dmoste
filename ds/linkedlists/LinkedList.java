@@ -66,13 +66,12 @@ public class LinkedList{
   returns the number of elements in the lsit
   */
   public int size(){
-    Node currentNode = head;
     int counter = 0;
 
-    while(currentNode != null){
-      currentNode = currentNode.getNext();
+    for(Node n = head; n != null; n = n.getNext()){
       counter++;
     }
+
   	return counter;
   }
 
@@ -86,14 +85,12 @@ public class LinkedList{
   indexOf("d") would return 3 since "d" is at location 3.
   */
   public int indexOf(String value){
-    Node currentNode = head;
     int counter = 0;
-    
-    while(currentNode != null){
-      if(currentNode.getData() == value){
+
+    for(Node n = head; n != null; n = n.getNext()){
+      if(n.getData() == value){
         return counter;
       }else{
-        currentNode = currentNode.getNext();
         counter++;
       }
     }
@@ -108,18 +105,15 @@ public class LinkedList{
   */
   public String toString(){
     Node currentNode = head;
-    String asString = "]";
-    
-    while(currentNode != null){
-      if(asString == "]"){
-        asString = currentNode.getData() + asString;
-      }else{
-        asString = currentNode.getData() + ", " + asString;        
-      }
-      currentNode = currentNode.getNext();
-    }
+    String asString = "[";
 
-    asString = "[" + asString;
+    for(Node n = head; n != null; n = n.getNext()){
+      if(n.getNext() != null){
+        asString += n.getData() + ", ";
+      }else{
+        asString += n.getData() + "]";
+      }
+    }
     
 	return asString;
   }
