@@ -42,16 +42,19 @@ public class LinkedList{
   Returns the String in the node at location index.
   */
   public String get(int index){
-    if(index >= 0 && head != null){
-      Node currentNode = head;
+    if(index >= 0){
+      if(head == null){
+        return "This Linked List is empty";
+      }else{
+        Node currentNode = head;
       
-      for(int i = 0; i < index; i++){
-        currentNode = currentNode.getNext();
+        for(int i = 0; i < index; i++){
+          currentNode = currentNode.getNext();
+        }
+        return currentNode.getData();
       }
-
-      return currentNode.getData();
     }else{
-      return "Not a valid index";
+      return "Indices must be positive";
     }
   }
 

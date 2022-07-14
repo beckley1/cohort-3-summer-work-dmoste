@@ -8,7 +8,7 @@ public class Driver{
     l.add("World");
 
     System.out.println(l.get(0));
-    System.out.println(l.size());
+    System.out.println("Size: " + l.size());
     
     System.out.println(l);
   }
