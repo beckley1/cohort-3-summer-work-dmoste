@@ -108,12 +108,18 @@ public class LinkedList{
   */
   public String toString(){
     Node currentNode = head;
-    String asString = "";
+    String asString = "]";
     
     while(currentNode != null){
-      asString = currentNode.getData() + ", " + asString;
+      if(asString == "]"){
+        asString = currentNode.getData() + asString;
+      }else{
+        asString = currentNode.getData() + ", " + asString;        
+      }
       currentNode = currentNode.getNext();
     }
+
+    asString = "[" + asString;
     
 	return asString;
   }
