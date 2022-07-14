@@ -49,7 +49,11 @@ public class LinkedList{
         Node currentNode = head;
       
         for(int i = 0; i < index; i++){
-          currentNode = currentNode.getNext();
+          if(currentNode != null){
+            currentNode = currentNode.getNext();
+          }else{
+            return "Index out of bounds";
+          }
         }
         return currentNode.getData();
       }
@@ -82,7 +86,19 @@ public class LinkedList{
   indexOf("d") would return 3 since "d" is at location 3.
   */
   public int indexOf(String value){
-	return 0;
+    Node currentNode = head;
+    int counter = 0;
+    
+    while(currentNode != null){
+      if(currentNode.getData() == value){
+        return counter;
+      }else{
+        currentNode = currentNode.getNext();
+        counter++;
+      }
+    }
+	
+    return -1;
   }
 
 
@@ -91,7 +107,15 @@ public class LinkedList{
   Return a string representation of the list
   */
   public String toString(){
-	return "";
+    Node currentNode = head;
+    String asString = "";
+    
+    while(currentNode != null){
+      asString = currentNode.getData() + ", " + asString;
+      currentNode = currentNode.getNext();
+    }
+    
+	return asString;
   }
 
 

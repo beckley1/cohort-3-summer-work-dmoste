@@ -7,7 +7,8 @@ public class Driver{
     l.add("Hello");
     l.add("World");
 
-    System.out.println(l.get(0));
+    System.out.println(l.get(4));
+    System.out.println(l.indexOf("Happy"));
     System.out.println("Size: " + l.size());
     
     System.out.println(l);
