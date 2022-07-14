@@ -34,21 +34,39 @@ public class LinkedList{
   Adds a new node containing value to the front of the list.
   */
   public void add(String value){
-
+    Node n = new Node(value, head);
+    head = n;
   }
 
   /**
   Returns the String in the node at location index.
   */
   public String get(int index){
-	return "";
+    if(index >= 0 && head != null){
+      Node currentNode = head;
+      
+      for(int i = 0; i < index; i++){
+        currentNode = currentNode.getNext();
+      }
+
+      return currentNode.getData();
+    }else{
+      return "Not a valid index";
+    }
   }
 
   /**
   returns the number of elements in the lsit
   */
   public int size(){
-	return 0;
+    Node currentNode = head;
+    int counter = 0;
+
+    while(currentNode != null){
+      currentNode = currentNode.getNext();
+      counter++;
+    }
+  	return counter;
   }
 
 
