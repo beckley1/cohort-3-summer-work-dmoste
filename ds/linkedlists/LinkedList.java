@@ -87,7 +87,7 @@ public class LinkedList{
   public int indexOf(String value){
     int counter = 0;
 
-    for(Node n = head; n != null; n = n.getNext()){
+    for(Node n = head; n.getNext() != null; n = n.getNext()){
       if(n.getData() == value){
         return counter;
       }else{
