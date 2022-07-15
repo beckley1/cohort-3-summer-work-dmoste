@@ -51,9 +51,9 @@ public class Driver{
   	// 2. moves walker to point to the next node
   	// 3. loops until walker gets to null
   
-      for(Node n = walker; n != null; n = n.getNext()){
-        System.out.println(n.getData());
-      }
+    for(Node n = walker; n != null; n = n.getNext()){
+      System.out.println(n.getData());
+    }
 	
   }
 
