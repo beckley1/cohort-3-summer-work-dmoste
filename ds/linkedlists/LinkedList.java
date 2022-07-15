@@ -2,22 +2,22 @@ import java.io.*;
 import java.util.*;
 
 /**
-  For all attempted methods, make sensible decisions for error and
-  edge cases (such as indexing out of bounds).
-  Basic
-  -----
-  add(string value)
-  get(int index);
-  indexOf(String value);
-  Intermediate (at least add, size + one of the other two)
-  ------------
-  add(int index,String value)
-  size()
-  toString()
-  toArray()
-  Challenge
-  --------
-  remove(int index);
+For all attempted methods, make sensible decisions for error and
+edge cases (such as indexing out of bounds).
+Basic
+-----
+add(string value)
+get(int index);
+toString()
+Intermediate (at least add, size + one of the other two)
+------------
+size()
+add(int index,String value)
+indexOf(String value);
+toArray()
+Challenge
+--------
+remove(int index);
 */
 
 public class LinkedList{
@@ -43,20 +43,17 @@ public class LinkedList{
   */
   public String get(int index){
     if(index >= 0){
-      if(head == null){
-        return "This Linked List is empty";
-      }else{
-        Node walker = head;
+      Node walker = head;
       
-        for(int i = 0; i < index; i++){
-          if(walker != null){
-            walker = walker.getNext();
-          }else{
-            return "Index out of bounds";
-          }
+      for(int i = 0; i < index; i++){
+        if(walker != null){
+          walker = walker.getNext();
+        }else{
+          return "Index out of bounds";
         }
-        return walker.getData();
       }
+      
+      return walker.getData();
     }else{
       return "Indices must be positive";
     }
@@ -109,14 +106,10 @@ public class LinkedList{
   */
   public String toString(){
     Node walker = head;
-    String asString = "[";
+    String asString = "";
 
     while(walker != null){
-      if(walker.getNext() != null){
-        asString += walker.getData() + ", ";
-      }else{
-        asString += walker.getData() + "]";
-      }
+      asString += walker.getData() + "-->";
       walker = walker.getNext();
     }
     
@@ -138,10 +131,18 @@ public class LinkedList{
   "a"-> "z" -> "b" -> "c" -> "d"
   */
   public void add(int index, String value){
-    Node nextNode;
+    Node walker1 = head;
+    Node walker2 = head;
+    Node n = new Node(value);
     
-    for(int i = 0; i < index; i++){
-      
+    for(int i = 0; i < index-1; i++){
+      walker1 = walker1.getNext();
+    }
+
+    n.setNext(walker1.getNext());
+
+    for(int i = 0; i < index-2; i++){
+      walker2 = walker2.getNext();
     }
   }
 
