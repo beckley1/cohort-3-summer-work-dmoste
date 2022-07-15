@@ -54,6 +54,12 @@ public class Driver{
     for(Node n = walker; n != null; n = n.getNext()){
       System.out.println(n.getData());
     }
+
+    while(walker.getNext() != null){
+      System.out.println(walker.getData());
+      walker = walker.getNext();
+    }
+    System.out.println(walker.getData());
 	
   }
 
