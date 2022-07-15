@@ -13,5 +13,8 @@ public class Driver{
     System.out.println("Size: " + l.size());
     
     System.out.println(l);
+
+    l.add(1, "New");
+    System.out.println(l);
   }
 }

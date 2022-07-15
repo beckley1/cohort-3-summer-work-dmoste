@@ -105,14 +105,16 @@ public class LinkedList{
   */
   public String toString(){
     Node walker = head;
-    String asString = "";
+    String temp = "";
 
     while(walker != null){
-      asString += walker.getData() + "-->";
+      temp += walker.getData() + "->";
       walker = walker.getNext();
     }
+
+    temp += "null";
     
-	return asString;
+	return temp;
   }
 
 
@@ -133,8 +135,8 @@ public class LinkedList{
     Node walker1 = head;
     Node walker2 = head;
     Node n = new Node(value);
-    
-    for(int i = 0; i < index-1; i++){
+
+    for(int i = 0; i < index; i++){
       walker1 = walker1.getNext();
     }
 
@@ -143,6 +145,8 @@ public class LinkedList{
     for(int i = 0; i < index-2; i++){
       walker2 = walker2.getNext();
     }
+
+    walker2.getNext().setNext(n);
   }
 
 
