@@ -46,16 +46,16 @@ public class LinkedList{
       if(head == null){
         return "This Linked List is empty";
       }else{
-        Node currentNode = head;
+        Node walker = head;
       
         for(int i = 0; i < index; i++){
-          if(currentNode != null){
-            currentNode = currentNode.getNext();
+          if(walker != null){
+            walker = walker.getNext();
           }else{
             return "Index out of bounds";
           }
         }
-        return currentNode.getData();
+        return walker.getData();
       }
     }else{
       return "Indices must be positive";
@@ -66,10 +66,12 @@ public class LinkedList{
   returns the number of elements in the lsit
   */
   public int size(){
+    Node walker = head;
     int counter = 0;
 
-    for(Node n = head; n != null; n = n.getNext()){
+    while(walker != null){
       counter++;
+      walker = walker.getNext();
     }
 
   	return counter;
@@ -85,13 +87,15 @@ public class LinkedList{
   indexOf("d") would return 3 since "d" is at location 3.
   */
   public int indexOf(String value){
+    Node walker = head;
     int counter = 0;
 
-    for(Node n = head; n != null; n = n.getNext()){
-      if(n.getData() == value){
+    while(walker != null){
+      if(walker.getData() == value){
         return counter;
       }else{
         counter++;
+        walker = walker.getNext();
       }
     }
 	
@@ -104,15 +108,16 @@ public class LinkedList{
   Return a string representation of the list
   */
   public String toString(){
-    Node currentNode = head;
+    Node walker = head;
     String asString = "[";
 
-    for(Node n = head; n != null; n = n.getNext()){
-      if(n.getNext() != null){
-        asString += n.getData() + ", ";
+    while(walker != null){
+      if(walker.getNext() != null){
+        asString += walker.getData() + ", ";
       }else{
-        asString += n.getData() + "]";
+        asString += walker.getData() + "]";
       }
+      walker = walker.getNext();
     }
     
 	return asString;
