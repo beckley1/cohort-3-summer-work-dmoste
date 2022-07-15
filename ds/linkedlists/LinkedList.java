@@ -133,7 +133,11 @@ public class LinkedList{
   "a"-> "z" -> "b" -> "c" -> "d"
   */
   public void add(int index, String value){
-
+    Node nextNode;
+    
+    for(int i = 0; i < index; i++){
+      
+    }
   }
 
 

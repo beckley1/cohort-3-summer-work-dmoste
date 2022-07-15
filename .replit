@@ -1,2 +1,2 @@
 language="bash"
-run="cd methods;javac *.java; java PairPro"
+run="cd ds/pointers;javac *.java; java Driver"

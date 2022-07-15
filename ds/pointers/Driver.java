@@ -1,30 +1,55 @@
+import java.io.*;
+import java.util.*;
+
 public class Driver{
+
   public static void main(String[] args) {
 
-    //Create node setup
-    Node p = new Node("5");
-    Node a = new Node("10");
-    Node b = new Node("15");
-    Node c = new Node("20");
+	// Fist:
+	// Start here and trace through
+	// the code by hand until the comment
+	// that says stop tracing
 
-    p.setNext(a);
-    a.setNext(b);
-    b.setNext(c);
+	Node front;
+	front = new Node("one");
+	front.setNext(new Node("two"));
+	front.getNext().setNext(new Node("three"));
+	front.getNext().getNext().setNext(new Node("four"));
 
-    //Create a new Node variable set it to point to the node with the 10 in it.
-    Node d = p.getNext();
+	System.out.println(front.getData());
 
-    //Create a new Node variable and instantiate it to a new Node with a value of 30.
-    Node e = new Node("30");
+	Node walker;
 
-    //Write the code to insert this new Node between the 10 and the 15
-    e.setNext(p.getNext().getNext());
-    p.getNext().setNext(e);
-    
-    System.out.println(p.getData());
-    System.out.println(p.getNext().getData());
-    System.out.println(p.getNext().getNext().getData());
-    System.out.println(p.getNext().getNext().getNext().getData());
-    System.out.println(p.getNext().getNext().getNext().getNext().getData());
-  }
+	walker = front;
+	System.out.println(front.getData());
+	walker = walker.getNext();
+	System.out.println(walker.getData());
+	System.out.println(front.getNext().getData());
+
+	// stop tracing
+
+	// Now, compile and run the program
+	// using "javac Driver.java Node.java"
+	// and then "java Driver"
+
+	// Once you've run,
+	// complete the program as per the following comments
+	// and compile and run your program again.
+
+	// Add a line to set the walker variable defined above
+	// so that it points to (refers to) the same node as
+	// the variable front points to.
+	
+	// Uncomment the next line, compile and run
+	// to test what you just added
+	//System.out.println(walker.getData());
+
+	// Add the code necessary
+	// to set up a loop that
+	// 1. prints out what is in walker.data()
+	// 2. moves walker to point to the next node
+	// 3. loops until walker gets to null
+	
+    }
+
 }
