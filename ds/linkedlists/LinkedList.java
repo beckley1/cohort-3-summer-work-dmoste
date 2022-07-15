@@ -34,8 +34,7 @@ public class LinkedList{
   Adds a new node containing value to the front of the list.
   */
   public void add(String value){
-    Node n = new Node(value, head);
-    head = n;
+    head = new Node(value, head);
   }
 
   /**
