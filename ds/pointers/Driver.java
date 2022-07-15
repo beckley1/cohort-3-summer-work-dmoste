@@ -42,7 +42,7 @@ public class Driver{
 	
 	// Uncomment the next line, compile and run
 	// to test what you just added
-	//System.out.println(walker.getData());
+	System.out.println(walker.getData());
 
 	// Add the code necessary
 	// to set up a loop that
