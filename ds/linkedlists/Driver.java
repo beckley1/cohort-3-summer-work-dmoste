@@ -4,12 +4,14 @@ import java.util.*;
 public class Driver{
   public static void main(String[] args) {
     LinkedList l = new LinkedList();
-    l.add("Dude");
-    l.add("World");
-    l.add("Hello");
+    System.out.println("Size: " + l.size());
+    
+    l.add("Six");
+    l.add("Five");
+    l.add("Four");
 
-    System.out.println("The value at index 4 is: " + l.get(4));
-    System.out.println("The index of Hello is: " + l.indexOf("Hello"));
+    System.out.println("The value at index 2 is: " + l.get(2));
+    System.out.println("The index of Four is: " + l.indexOf("Four"));
     System.out.println("Size: " + l.size());
     
     System.out.println(l);
