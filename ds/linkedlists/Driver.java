@@ -39,6 +39,9 @@ public class Driver{
     l.remove(0);
     System.out.println(l);
 
+    l.remove(2);
+    System.out.println(l);
+
     l.remove(1);
     System.out.println(l);
   }
