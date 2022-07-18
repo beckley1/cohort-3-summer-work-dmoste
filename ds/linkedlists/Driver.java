@@ -14,10 +14,19 @@ public class Driver{
     
     System.out.println(l);
 
-    l.add(0, "New");
+    l.add(0, "Zero");
     System.out.println(l);
 
-    l.add(3, "Yay");
+    l.add(1, "One");
+    System.out.println(l);
+
+    l.add(2, "Two");
+    System.out.println(l);
+
+    l.add(3, "Three");
+    System.out.println(l);
+
+    l.add(7, "Seven");
     System.out.println(l);
 
     System.out.println(Arrays.toString(l.toArray()));

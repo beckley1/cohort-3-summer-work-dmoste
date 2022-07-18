@@ -132,28 +132,24 @@ public class LinkedList{
   "a"-> "z" -> "b" -> "c" -> "d"
   */
   public void add(int index, String value){
-    Node walker1 = head;
-    Node walker2 = head;
+    Node walker = head;
     Node n = new Node(value);
 
     if(index == 0){
-      n.setNext(head);
-      head = n;
+      add(value);
     }else if(index == 1){
       n.setNext(head.getNext());
       head.setNext(n);
+    }else if(index == 2){
+      n.setNext(head.getNext().getNext());
+      head.getNext().setNext(n);
     }else{
-      for(int i = 0; i < index-1; i++){
-        walker1 = walker1.getNext();
-      }
-  
-      n.setNext(walker1.getNext());
-  
       for(int i = 0; i < index-2; i++){
-        walker2 = walker2.getNext();
+        walker = walker.getNext();
       }
-  
-      walker2.getNext().setNext(n); 
+
+      n.setNext(walker.getNext().getNext());
+      walker.getNext().setNext(n);
     }
   }
 
