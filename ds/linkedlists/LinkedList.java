@@ -190,6 +190,10 @@ public class LinkedList{
 
     if(index == 0){
       head = head.getNext();
+    }else if(index == 1){
+      head.setNext(head.getNext().getNext());
+    }else if(index == 2){
+      head.getNext().setNext(head.getNext().getNext().getNext());
     }else{
       for(int i = 0; i < index-2; i++){
         walker = walker.getNext();

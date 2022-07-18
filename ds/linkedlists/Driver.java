@@ -39,7 +39,7 @@ public class Driver{
     l.remove(0);
     System.out.println(l);
 
-    l.remove(3);
+    l.remove(1);
     System.out.println(l);
   }
 }
