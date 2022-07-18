@@ -14,7 +14,7 @@ public class Driver{
     
     System.out.println(l);
 
-    l.add(1, "New");
+    l.add(3, "New");
     System.out.println(l);
   }
 }

@@ -136,17 +136,25 @@ public class LinkedList{
     Node walker2 = head;
     Node n = new Node(value);
 
-    for(int i = 0; i < index; i++){
-      walker1 = walker1.getNext();
+    if(index == 0){
+      n.setNext(head);
+      head = n;
+    }else if(index == 1){
+      n.setNext(head.getNext());
+      head.setNext(n);
+    }else{
+      for(int i = 0; i < index-1; i++){
+        walker1 = walker1.getNext();
+      }
+  
+      n.setNext(walker1.getNext());
+  
+      for(int i = 0; i < index-2; i++){
+        walker2 = walker2.getNext();
+      }
+  
+      walker2.getNext().setNext(n); 
     }
-
-    n.setNext(walker1.getNext());
-
-    for(int i = 0; i < index-2; i++){
-      walker2 = walker2.getNext();
-    }
-
-    walker2.getNext().setNext(n);
   }
 
 
