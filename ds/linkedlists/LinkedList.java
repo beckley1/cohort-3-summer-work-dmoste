@@ -166,7 +166,23 @@ public class LinkedList{
   the array.
   */
   public String[] toArray(){
-    return null;
+    Node walker1 = head;
+    Node walker2 = head;
+    int counter = 0;
+
+    while(walker1 != null){
+      counter++;
+      walker1 = walker1.getNext();
+    }
+
+    String[] data = new String[counter];
+
+    for(int i = 0; i < counter; i++){
+      data[i] = walker2.getData();
+      walker2 = walker2.getNext();
+    }
+    
+    return data;
   }
 
 

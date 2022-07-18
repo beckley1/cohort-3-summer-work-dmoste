@@ -14,7 +14,12 @@ public class Driver{
     
     System.out.println(l);
 
-    l.add(3, "New");
+    l.add(0, "New");
     System.out.println(l);
+
+    l.add(3, "Yay");
+    System.out.println(l);
+
+    System.out.println(Arrays.toString(l.toArray()));
   }
 }
