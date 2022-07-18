@@ -186,5 +186,16 @@ public class LinkedList{
   "a"->"b"->"d"->"e"
   */
   public void remove(int index){
+    Node walker = head;
+
+    if(index == 0){
+      head = head.getNext();
+    }else{
+      for(int i = 0; i < index-2; i++){
+        walker = walker.getNext();
+      }
+
+      walker.getNext().setNext(walker.getNext().getNext().getNext());
+    }
   }
 }

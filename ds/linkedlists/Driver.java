@@ -32,5 +32,14 @@ public class Driver{
     System.out.println(l);
 
     System.out.println(Arrays.toString(l.toArray()));
+
+    l.remove(7);
+    System.out.println(l);
+
+    l.remove(0);
+    System.out.println(l);
+
+    l.remove(3);
+    System.out.println(l);
   }
 }
