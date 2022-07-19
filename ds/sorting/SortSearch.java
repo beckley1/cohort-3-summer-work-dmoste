@@ -30,32 +30,30 @@ public class SortSearch{
 
     
     public SortSearch(){
-	data = new ArrayList<Integer>();
-	r = new Random();
-	for (int i=0;i<15;i++){
-	    data.add(r.nextInt(20));
-	}
-	
+	    data = new ArrayList<Integer>();
+	    r = new Random();
+	    for (int i = 0; i < 15; i++){
+	      data.add(r.nextInt(20));
+	    }
     }
     
     public SortSearch(int size){
-	data = new ArrayList<Integer>();
-	r = new Random();
-	for (int i=0;i<size;i++){
-	    data.add(r.nextInt(20));
-	}
-	
+	    data = new ArrayList<Integer>();
+	    r = new Random();
+	    for (int i = 0; i < size; i++){
+	      data.add(r.nextInt(20));
+	    }
     }
 
     /* Convenience function to get data out of the ArrayList from the driver */
     public int get(int index){
-	return this.data.get(index);
+	    return this.data.get(index);
     }
     
 
 
     /*
-      return the index of the smallest data idem from index start to the end
+      return the index of the smallest data item from index start to the end
       of the ArrayList. If there are multiple of the smallest value,
       return any of them.
       
@@ -69,9 +67,17 @@ public class SortSearch{
       
     */
     public int findSmallestIndex(int start){
-	int smallIndex = 0;
-	
-	return smallIndex;
+	    int smallIndex = 0;
+      int minVal = data.get(start);
+
+      for(int i = start+1; i < data.size(); i++){
+        if(data.get(i) < minVal){
+          minVal = data.get(i);
+          smallIndex = i;
+        }
+      }
+      
+	    return smallIndex;
     }
 
 
@@ -87,7 +93,13 @@ public class SortSearch{
        
     */
     public void sort(){
-
+      for(int i = 0; i < data.size(); i++){
+        int currentVal = data.get(i);
+        int smallIndex = findSmallestIndex(i);
+        
+        data.set(i, data.get(smallIndex));
+        data.set(smallIndex, currentVal);
+      }
 
     }
 
