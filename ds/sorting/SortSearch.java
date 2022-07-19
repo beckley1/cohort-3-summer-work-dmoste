@@ -68,11 +68,11 @@ public class SortSearch{
     */
     public int findSmallestIndex(int start){
 	    int smallIndex = start;
-      int minVal = data.get(start);
+      int minVal = get(start);
 
       for(int i = start+1; i < data.size(); i++){
-        if(data.get(i) < minVal){
-          minVal = data.get(i);
+        if(get(i) < minVal){
+          minVal = get(i);
           smallIndex = i;
         }
       }
@@ -94,10 +94,10 @@ public class SortSearch{
     */
     public void sort(){     
       for(int i = 0; i < data.size(); i++){
-        int currentVal = data.get(i);
+        int currentVal = get(i);
         int smallIndex = findSmallestIndex(i);
         
-        data.set(i, data.get(smallIndex));
+        data.set(i, get(smallIndex));
         data.set(smallIndex, currentVal);
       }
 
@@ -116,7 +116,7 @@ public class SortSearch{
     */
     public int linearSearch(int value){
       for(int i = 0; i < data.size(); i++){
-        if(data.get(i) == value){
+        if(get(i) == value){
           return i;
         }
       }
