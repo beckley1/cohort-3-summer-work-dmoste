@@ -115,9 +115,13 @@ public class SortSearch{
        This algorithm works on any ArrayList.
     */
     public int linearSearch(int value){
+      for(int i = 0; i < data.size(); i++){
+        if(data.get(i) == value){
+          return i;
+        }
+      }
 	
-	
-	return 0; // replace this return
+	    return -1;
     }
     
     /**
@@ -132,7 +136,7 @@ public class SortSearch{
 	//   if the item is at data.get(middle), return middle
 	//   otherwise, update high, low, and middle
 
-	return 0;
+	    return 0;
 	    
     }
     
@@ -146,18 +150,18 @@ public class SortSearch{
 
 	// refer to class discussion
 	
-	return 0;
+	    return 0;
 	    
     }
     
 	
     public String toString(){
-	return ""+data;
+	    return ""+data;
     };
 
 
     public void builtinSort(){
-	Collections.sort(data);
+	    Collections.sort(data);
 	
     }
     
