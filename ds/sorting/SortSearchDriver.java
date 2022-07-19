@@ -25,6 +25,8 @@ public class SortSearchDriver {
 	System.out.println(ss);
 	ss.sort();
 	System.out.println(ss);
+
+  System.out.println(ss.binarySearch(4));
 	
 
 

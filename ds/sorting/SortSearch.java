@@ -135,8 +135,26 @@ public class SortSearch{
 	// while we're not done:
 	//   if the item is at data.get(middle), return middle
 	//   otherwise, update high, low, and middle
+      int high = data.size();
+      int low = 0;
+      int mid = (high + low)/2;
+      boolean found = false;
 
-	    return 0;
+      while(!found){
+        if(get(mid) < value){
+          low = mid + 1;
+          mid = (high + low)/2;
+        }else if(get(mid) > value){
+          high = mid - 1;
+          mid = (high + low)/2;
+        }else if(low > high){
+          return -1;
+        }else{
+          found = true;
+        }
+      }
+
+	    return mid;
 	    
     }
     
