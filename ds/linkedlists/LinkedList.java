@@ -137,19 +137,12 @@ public class LinkedList{
 
     if(index == 0){
       add(value);
-    }else if(index == 1){
-      n.setNext(head.getNext());
-      head.setNext(n);
-    }else if(index == 2){
-      n.setNext(head.getNext().getNext());
-      head.getNext().setNext(n);
     }else{
-      for(int i = 0; i < index-2; i++){
+      for(int i = 0; i < index-1; i++){
         walker = walker.getNext();
       }
-
-      n.setNext(walker.getNext().getNext());
-      walker.getNext().setNext(n);
+      n.setNext(walker.getNext());
+      walker.setNext(n);
     }
   }
 
@@ -190,16 +183,12 @@ public class LinkedList{
 
     if(index == 0){
       head = head.getNext();
-    }else if(index == 1){
-      head.setNext(head.getNext().getNext());
-    }else if(index == 2){
-      head.getNext().setNext(head.getNext().getNext().getNext());
     }else{
-      for(int i = 0; i < index-2; i++){
+      for(int i = 0; i < index-1; i++){
         walker = walker.getNext();
       }
 
-      walker.getNext().setNext(walker.getNext().getNext().getNext());
+      walker.setNext(walker.getNext().getNext());
     }
   }
 }
