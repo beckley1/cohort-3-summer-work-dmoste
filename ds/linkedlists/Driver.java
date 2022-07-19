@@ -44,5 +44,7 @@ public class Driver{
 
     l.remove(1);
     System.out.println(l);
+
+    System.out.println(Arrays.toString(l.toArray()));
   }
 }
