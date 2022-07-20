@@ -164,9 +164,22 @@ public class SortSearch{
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
 
 	// refer to class discussion
-	
-	    return 0;
-	    
+      int index = -1;
+      int mid = (lowIndex + highIndex)/2;
+  
+      if (lowIndex > highIndex){
+       return index; 
+      }
+
+      if (get(mid) == value) {
+        index = mid;
+      }else if (get(mid) > value) {
+        return binarySearchRecursive(value, lowIndex, mid - 1);
+      }else if (get(mid) < value) {
+        return binarySearchRecursive(value, mid + 1, highIndex);
+      }
+  
+      return index;	
     }
     
 	
