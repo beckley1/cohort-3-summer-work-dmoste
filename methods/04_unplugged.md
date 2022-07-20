@@ -20,10 +20,12 @@ Students are familiar with Booleans and have discussed conditionals -- they have
 * Visual supplement to go with first (and maybe 2nd round) [e.g. the input being called out is posted clearly and in huge font...a revealed slide between 1st and 2nd round explaining hows/whys of round 1]
 * accommodation: be mindful of abilities and inclusivity when creating commands (ex. physical mobility)
 * splitting round 1 into a & b as a check for understanding
+* adding visual supplement for explanation (nesting and python indentation for round 2)
 
 ### Go!
-1. Students get a set of instructions and an input value. Input is provided by the teacher. Instructions will be modified after each round to increase complexity.
-2. Round 1a: (input = 4)
+1. Students get a set of instructions and an input value. Input is provided by the teacher. Each round of instructions has sub-rounds with different inputs. Instructions will be modified after each round to increase complexity.
+2. Students should record which commands they do/don't follow for each different input
+3. Round 1a: (input = 4)
    ```
    if input > 5:
      Stand on a chair
@@ -32,7 +34,7 @@ Students are familiar with Booleans and have discussed conditionals -- they have
      Sit on the floor
    ```
 
-3. Round 1b: (same code, input = 13)
+4. Round 1b: (same code, input = 13)
    ```
    if input > 5:
      Stand on a chair
@@ -41,7 +43,7 @@ Students are familiar with Booleans and have discussed conditionals -- they have
      Sit on the floor
    ```
    
-4. Round 2: (2a: input = 9, 2b: input = 3, 2c: input = 7)
+5. Round 2: (2a: input = 9, 2b: input = 3, 2c: input = 7)
    ```
    if input > 5:
      Stand up (on the floor)
@@ -54,7 +56,7 @@ Students are familiar with Booleans and have discussed conditionals -- they have
      if input < 7:
        High five a neighbor
    ```
-6. Round 3: (3a: input = 6, 3b: input = 10, 3c: input = 3, ask: What input could be used to get to the "Bark like a dog" line?[Answer: 5] Which input could be used to get to Meow like a cat? [Answer: Challenge: Which instruction is impossible to reach? [Answer: Lick your elbow])
+6. Round 3: (3a: input = 6, 3b: input = 10, 3c: input = 3, ask: What input could be used to get to the "Bark like a dog" line?[Answer: 5] Which input could be used to get to Meow like a cat? [Answer: 8] Challenge: Which instruction is impossible to reach? [Answer: Lick your elbow])
    ```
    if input == 3:
      Cluck like a chicken
