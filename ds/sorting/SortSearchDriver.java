@@ -28,17 +28,17 @@ public class SortSearchDriver {
 
       //Linear Search
       System.out.println("(Linear) Index of -2: " + ss.linearSearch(-2));
-      System.out.println("(Linear) Index of 4: " + ss.linearSearch(4));
+      System.out.println("(Linear) Index of 11: " + ss.linearSearch(11));
       System.out.println("(Linear) Index of 20: " + ss.linearSearch(20));
 
       //Binary Search
       System.out.println("Index of -2: " + ss.binarySearch(-2));
-      System.out.println("Index of 4: " + ss.binarySearch(4));
+      System.out.println("Index of 11: " + ss.binarySearch(11));
       System.out.println("Index of 20: " + ss.binarySearch(20));
 
       //Recursive Binary Search
       System.out.println("(Recursive) Index of -2: " + ss.binarySearchRecursive(-2, 0, 19));
-      System.out.println("(Recursive) Index of 4: " + ss.binarySearchRecursive(4, 0, 19));
+      System.out.println("(Recursive) Index of 11: " + ss.binarySearchRecursive(11, 0, 19));
       System.out.println("(Recursive) Index of 20: " + ss.binarySearchRecursive(20, 0, 19));
     }
 }

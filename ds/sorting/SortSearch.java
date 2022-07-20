@@ -141,14 +141,14 @@ public class SortSearch{
       int index = -1;
 
       while(low <= high){
-        if(get(mid) < value){
-          low = mid + 1;
-          mid = (high + low)/2;
+        if(get(mid) == value){
+          return mid;
         }else if(get(mid) > value){
           high = mid - 1;
           mid = (high + low)/2;
-        }else if(get(mid) == value){
-          return mid;
+        }else if(get(mid) < value){
+          low = mid + 1;
+          mid = (high + low)/2;
         }
       }
 
@@ -164,15 +164,15 @@ public class SortSearch{
     public int binarySearchRecursive(int value, int lowIndex, int highIndex){
 
 	// refer to class discussion
-      int index = -1;
       int mid = (lowIndex + highIndex)/2;
+      int index = -1;
   
       if (lowIndex > highIndex){
        return index; 
       }
 
       if (get(mid) == value) {
-        index = mid;
+        return mid;
       }else if (get(mid) > value) {
         return binarySearchRecursive(value, lowIndex, mid - 1);
       }else if (get(mid) < value) {
