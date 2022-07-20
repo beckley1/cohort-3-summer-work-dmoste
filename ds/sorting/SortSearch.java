@@ -141,7 +141,6 @@ public class SortSearch{
       int index = -1;
 
       while(low <= high){
-        //System.out.println(mid);
         if(get(mid) < value){
           low = mid + 1;
           mid = (high + low)/2;
@@ -149,8 +148,7 @@ public class SortSearch{
           high = mid - 1;
           mid = (high + low)/2;
         }else if(get(mid) == value){
-          index = mid;
-          break;
+          return mid;
         }
       }
 
