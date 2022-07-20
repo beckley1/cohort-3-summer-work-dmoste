@@ -138,7 +138,6 @@ public class SortSearch{
       int high = data.size()-1;
       int low = 0;
       int mid = (high + low)/2;
-      int index = -1;
 
       while(low <= high){
         if(get(mid) == value){
@@ -152,7 +151,7 @@ public class SortSearch{
         }
       }
 
-	    return index;
+	    return -1;
     }
     
     /**
