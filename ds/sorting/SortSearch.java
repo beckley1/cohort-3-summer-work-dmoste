@@ -167,15 +167,13 @@ public class SortSearch{
   
       if(lowIndex > highIndex){
        return -1; 
+      }else if (get(mid) == value) {
+        return mid;
+      }else if (get(mid) > value) {
+        return binarySearchRecursive(value, lowIndex, mid - 1);
       }else{
-        if (get(mid) == value) {
-          return mid;
-        }else if (get(mid) > value) {
-          return binarySearchRecursive(value, lowIndex, mid - 1);
-        }else{
-          return binarySearchRecursive(value, mid + 1, highIndex);
-        } 
-      }	
+        return binarySearchRecursive(value, mid + 1, highIndex);
+      } 
     }
     
 	
