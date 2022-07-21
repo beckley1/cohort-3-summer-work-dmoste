@@ -5,6 +5,7 @@ public class AnimatedSearchDriver {
     public static void main(String[] args) {
     	AnimatedSearch ss = new AnimatedSearch(20);
       ss.sort();
-    	ss.binarySearchAnimated(5);
+    	int index = ss.binarySearchAnimated(2);
+      System.out.println("The value was at: " + index);
     }
 }

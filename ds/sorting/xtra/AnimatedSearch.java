@@ -140,22 +140,25 @@ public class AnimatedSearch{
 
     public void animate(int high, int mid, int low, int value)
     {
-      char[] names = new char[data.size()];
-      char[] locs = new char[data.size()];
+      String[] names = new String[data.size()];
+      String[] locs = new String[data.size()];
 
       for(int i = 0 ; i < data.size(); i++){
         if(i == low){
-          names[i] = 'l';
-          locs[i] = '^';
+          names[i] = "l";
+          locs[i] = "^";
         }else if(i == mid){
-          names[i] = 'm';
-          locs[i] = '^';
+          names[i] = "m";
+          locs[i] = "^";
         }else if(i == high){
-          names[i] = 'h';
-          locs[i] = '^';
+          names[i] = "h";
+          locs[i] = "^";
+        }else if(get(i) > 9){
+          names[i] = "  ";
+          locs[i] = "  ";
         }else{
-          names[i] = ' ';
-          locs[i] = ' ';
+          names[i] = " ";
+          locs[i] = " ";
         }
       }
       //place cursor at origin (upper left)
@@ -168,7 +171,7 @@ public class AnimatedSearch{
       System.out.println(Arrays.toString(names));
       System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - ");
   
-      delay(1000);
+      delay(3000);
     }
     
 }

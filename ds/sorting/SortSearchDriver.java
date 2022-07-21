@@ -6,8 +6,10 @@ public class SortSearchDriver {
 
 
     	// Uncomment these to test part 1
-    	
-    	SortSearch ss = new SortSearch(20);
+
+      int size = 20;
+      
+    	SortSearch ss = new SortSearch(size);
     	System.out.println(ss);
     	
     		
@@ -37,8 +39,8 @@ public class SortSearchDriver {
       System.out.println("Index of 20: " + ss.binarySearch(20));
 
       //Recursive Binary Search
-      System.out.println("(Recursive) Index of -2: " + ss.binarySearchRecursive(-2, 0, 19));
-      System.out.println("(Recursive) Index of 11: " + ss.binarySearchRecursive(11, 0, 19));
-      System.out.println("(Recursive) Index of 20: " + ss.binarySearchRecursive(20, 0, 19));
+      System.out.println("(Recursive) Index of -2: " + ss.binarySearchRecursive(-2, 0, size-1));
+      System.out.println("(Recursive) Index of 11: " + ss.binarySearchRecursive(11, 0, size-1));
+      System.out.println("(Recursive) Index of 20: " + ss.binarySearchRecursive(20, 0, size-1));
     }
 }
