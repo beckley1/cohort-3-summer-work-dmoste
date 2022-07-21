@@ -2,24 +2,10 @@ import java.io.*;
 import java.util.*;
 
 /*
-Sort Project:
-Part 1:  (BASIC)
-  1. Analyze the two constructors - try to figure out how they work.
-  2. Compile and run the program (SortProjectDriver.java and SortProject.java) and confirm
-  the behavior of the constructors.
-  Part 2: (BASIC)
-  1. Read the description of findSmallestIndex and complete the method.
-  2. Uncomment the lines in SortProjectDriver to test.
-  Part 3: (INTERMEDIATE)
-  1. Complete the sort method - read comments for description
-  2. Uncomment the lines in sortProjectDriver to test.
-Search Project:
-  1. Complete the linear search (BASIC)
-  2. Complete the binary search (Intermediate)
-  3. Complete the recursive version of binary search (Advanced)
+This is an extension in which binary search is animated
 */
 
-public class SortSearch{
+public class AnimatedSearch{
 
     /* Sort project starts here */
     
@@ -29,7 +15,7 @@ public class SortSearch{
     private Random r; 
 
     
-    public SortSearch(){
+    public AnimatedSearch(){
 	    data = new ArrayList<Integer>();
 	    r = new Random();
 	    for (int i = 0; i < 15; i++){
@@ -37,7 +23,7 @@ public class SortSearch{
 	    }
     }
     
-    public SortSearch(int size){
+    public AnimatedSearch(int size){
 	    data = new ArrayList<Integer>();
 	    r = new Random();
 	    for (int i = 0; i < size; i++){
@@ -102,34 +88,23 @@ public class SortSearch{
       }
 
     }
-
-
-
-    /* Search project starts here */
     
-    /**
-       performs a linear search. Returns the index of the first occurence of
-       value in the ArrayList data or -1 if not found.
-       This works by starting at the first element and searching one element at a time 
-       until either the element is found or you've looked at all the elements.
-       This algorithm works on any ArrayList.
-    */
-    public int linearSearch(int value){
-      for(int i = 0; i < data.size(); i++){
-        if(get(i) == value){
-          return i;
-        }
-      }
 	
-	    return -1;
+    public String toString(){
+	    return ""+data;
+    };
+
+
+    public void builtinSort(){
+	    Collections.sort(data);
+	
     }
-    
-    /**
-       Implement a binary search as specified by the comments
-       
-       This algorithm only works on sorted ArrayLists.
-    */
-    public int binarySearch(int value){
+
+    public int binarySearchAnimated(int value){
+
+      //clear the shell and hide the cursor
+      System.out.print("\033[2J\033[?25l");
+
 	// create assign variables  representing the high, low and middle indices 
 	// while we're not done:
 	//   if the item is at data.get(middle), return middle
@@ -139,6 +114,7 @@ public class SortSearch{
       int mid = (high + low)/2;
 
       while(low <= high){
+        animate(high, mid, low, value);
         if(get(mid) == value){
           return mid;
         }else if(get(mid) > value){
@@ -150,40 +126,49 @@ public class SortSearch{
         }
       }
       
+      //show the cursor
+      System.out.print("\033[?25h");
 	    return -1;
     }
-    
-    /**
-       Implement a RECURSIVE binary search as specified by the comments
-       
-       This algorithm only works on sorted ArrayLists.
-    */
-
-    public int binarySearchRecursive(int value, int lowIndex, int highIndex){
-
-	// refer to class discussion
-      int mid = (lowIndex + highIndex)/2;
-  
-      if(lowIndex > highIndex){
-       return -1; 
-      }else if (get(mid) == value) {
-        return mid;
-      }else if (get(mid) > value) {
-        return binarySearchRecursive(value, lowIndex, mid - 1);
-      }else{
-        return binarySearchRecursive(value, mid + 1, highIndex);
-      } 
+    public void delay(int n)
+    {
+      try {
+        Thread.sleep(n);
+      }  
+      catch(InterruptedException e) {}
     }
-    
-	
-    public String toString(){
-	    return ""+data;
-    };
 
+    public void animate(int high, int mid, int low, int value)
+    {
+      char[] names = new char[data.size()];
+      char[] locs = new char[data.size()];
 
-    public void builtinSort(){
-	    Collections.sort(data);
-	
+      for(int i = 0 ; i < data.size(); i++){
+        if(i == low){
+          names[i] = 'l';
+          locs[i] = '^';
+        }else if(i == mid){
+          names[i] = 'm';
+          locs[i] = '^';
+        }else if(i == high){
+          names[i] = 'h';
+          locs[i] = '^';
+        }else{
+          names[i] = ' ';
+          locs[i] = ' ';
+        }
+      }
+      //place cursor at origin (upper left)
+      System.out.print("\033[0;0H\n");
+
+      System.out.println("Finding " + value);
+  
+      System.out.println(Arrays.toString(data.toArray()));
+      System.out.println(Arrays.toString(locs));
+      System.out.println(Arrays.toString(names));
+      System.out.println("- - - - - - - - - - - - - - - - - - - - - - - - - - ");
+  
+      delay(1000);
     }
     
 }

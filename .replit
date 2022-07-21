@@ -1,2 +1,2 @@
 language="bash"
-run="cd ds/sorting;javac *.java; java SortSearchDriver"
+run="cd ds/sorting/xtra;javac *.java; java AnimatedSearchDriver"
