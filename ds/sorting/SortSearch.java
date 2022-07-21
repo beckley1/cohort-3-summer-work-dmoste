@@ -164,21 +164,18 @@ public class SortSearch{
 
 	// refer to class discussion
       int mid = (lowIndex + highIndex)/2;
-      int index = -1;
   
-      if (lowIndex > highIndex){
-       return index; 
-      }
-
-      if (get(mid) == value) {
-        return mid;
-      }else if (get(mid) > value) {
-        return binarySearchRecursive(value, lowIndex, mid - 1);
-      }else if (get(mid) < value) {
-        return binarySearchRecursive(value, mid + 1, highIndex);
-      }
-  
-      return index;	
+      if(lowIndex > highIndex){
+       return -1; 
+      }else{
+        if (get(mid) == value) {
+          return mid;
+        }else if (get(mid) > value) {
+          return binarySearchRecursive(value, lowIndex, mid - 1);
+        }else{
+          return binarySearchRecursive(value, mid + 1, highIndex);
+        } 
+      }	
     }
     
 	
