@@ -219,30 +219,30 @@ public class SortSearch{
       public ArrayList<Integer> merge(ArrayList<Integer> list1, ArrayList<Integer> list2){
     
     	  // code for merge
+        ArrayList<Integer> merged = new ArrayList<Integer>();
     	  int i = 0;
         int j = 0;
-        ArrayList<Integer> temp = new ArrayList<Integer>();
 
         while(i < list1.size() && j < list2.size()){
           if(list1.get(i) <= list2.get(j)){
-            temp.add(list1.get(i));
+            merged.add(list1.get(i));
             i++;
           }else{
-            temp.add(list2.get(j));
+            merged.add(list2.get(j));
             j++;
           }
         }
 
         while(i < list1.size()){
-          temp.add(list1.get(i));
+          merged.add(list1.get(i));
           i++;
         }
 
         while(j < list2.size()){
-          temp.add(list2.get(j));
+          merged.add(list2.get(j));
           j++;
         }
         
-    	  return temp; // replace this line
+    	  return merged; // replace this line
         }
 }
