@@ -223,7 +223,7 @@ public class SortSearch{
         int j = 0;
         ArrayList<Integer> temp = new ArrayList<Integer>();
 
-        while(i < list1.size()-1 && j < list2.size()-1){
+        while(i < list1.size() && j < list2.size()){
           if(list1.get(i) <= list2.get(j)){
             temp.add(list1.get(i));
             i++;
@@ -233,12 +233,12 @@ public class SortSearch{
           }
         }
 
-        while(i < list1.size()-1){
+        while(i < list1.size()){
           temp.add(list1.get(i));
           i++;
         }
 
-        while(j < list2.size()-1){
+        while(j < list2.size()){
           temp.add(list2.get(j));
           j++;
         }
