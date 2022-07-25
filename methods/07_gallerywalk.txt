@@ -1,0 +1,31 @@
+David Moste
+Methods Summer 2022
+GALLERY TOUR LOG
+
+====================================================
+DISCOVERIES:
+* Jerusha wrote her own html page!
+* Adding GIFs is just as easy as adding images
+* Tables can really make your page look better
+* Bitmojis are a cool way to make the site look better
+* The todo lists are really cool!
+
+LINGERING QUESTIONS:
+* What are all the ways that html can make your page more interesting/useful?
+* How do you add two lines to a single cell in a table?
+* How do you make the checkmarks in the todo lists?
+
+COMMENTS/CONCERNS/OTHER:
+* Writing the html seems like a lot more work than just a markdown file.
+* What is the balance between effort and aesthetics?
+====================================================
+
+
+USAGE OF BOTTOM SECTION: 
+* For any site you deem notable, add an entry using the format below
+====================================================
+notable site:
+URL: https://jmtheo8.github.io/nycscertweb/
+notable aspect: she wrote her own html
+what is cool about this site
+-------------------------------------
