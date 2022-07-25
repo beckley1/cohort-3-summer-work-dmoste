@@ -24,8 +24,5 @@ COMMENTS/CONCERNS/OTHER:
 USAGE OF BOTTOM SECTION: 
 * For any site you deem notable, add an entry using the format below
 ====================================================
-notable site:
-URL: https://jmtheo8.github.io/nycscertweb/
-notable aspect: she wrote her own html
-what is cool about this site
+
 -------------------------------------
