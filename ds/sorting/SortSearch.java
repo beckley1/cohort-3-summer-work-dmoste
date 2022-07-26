@@ -247,19 +247,11 @@ public class SortSearch{
   }
 
   public ArrayList<Integer> mergeSort(ArrayList<Integer> list){
-    ArrayList<Integer> left = new ArrayList<Integer>();
-    ArrayList<Integer> right = new ArrayList<Integer>();
-
     if(list.size() < 2){
       return list;
     }else{
-      for(int i = 0; i < list.size()/2; i++){
-        left.add(list.get(i));
-      }
-
-      for(int i = list.size()/2; i < list.size(); i++){
-        right.add(list.get(i));
-      }
+      ArrayList<Integer> left = new ArrayList<Integer>(list.subList(0, list.size()/2));
+      ArrayList<Integer> right = new ArrayList<Integer>(list.subList(list.size()/2, list.size()));
 
       left = mergeSort(left);
       right = mergeSort(right);
