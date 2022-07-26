@@ -25,23 +25,23 @@ public class SortSearchDriver {
     	// Uncomment these to test part 3
     
     	System.out.println("Original: " + ss);
-    	//ss.sort();
-    	//System.out.println("Sorted: " + ss);
+    	ss.sort();
+    	System.out.println("Sorted: " + ss);
 
       //Linear Search
-      //System.out.println("(Linear) Index of -2: " + ss.linearSearch(-2));
-      //System.out.println("(Linear) Index of 11: " + ss.linearSearch(11));
-      //System.out.println("(Linear) Index of 20: " + ss.linearSearch(20));
+      System.out.println("(Linear) Index of -2: " + ss.linearSearch(-2));
+      System.out.println("(Linear) Index of 11: " + ss.linearSearch(11));
+      System.out.println("(Linear) Index of 20: " + ss.linearSearch(20));
 
       //Binary Search
-      //System.out.println("Index of -2: " + ss.binarySearch(-2));
-      //System.out.println("Index of 11: " + ss.binarySearch(11));
-      //System.out.println("Index of 20: " + ss.binarySearch(20));
+      System.out.println("Index of -2: " + ss.binarySearch(-2));
+      System.out.println("Index of 11: " + ss.binarySearch(11));
+      System.out.println("Index of 20: " + ss.binarySearch(20));
 
       //Recursive Binary Search
-      //System.out.println("(Recursive) Index of -2: " + ss.binarySearchRecursive(-2, 0, size-1));
-      //System.out.println("(Recursive) Index of 11: " + ss.binarySearchRecursive(11, 0, size-1));
-      //System.out.println("(Recursive) Index of 20: " + ss.binarySearchRecursive(20, 0, size-1));
+      System.out.println("(Recursive) Index of -2: " + ss.binarySearchRecursive(-2, 0, size-1));
+      System.out.println("(Recursive) Index of 11: " + ss.binarySearchRecursive(11, 0, size-1));
+      System.out.println("(Recursive) Index of 20: " + ss.binarySearchRecursive(20, 0, size-1));
 
       System.out.println("---------------------------------------------");
       ArrayList<Integer> a = ss.buildIncreasingList(20);
@@ -52,9 +52,12 @@ public class SortSearchDriver {
 	    System.out.println(b);
 
 	    // test your merge routine here
-      //System.out.println(ss.merge(a,b));
+      System.out.println(ss.merge(a,b));
 
-    	ss.msort();
-    	System.out.println("Sorted: " + ss);
+      System.out.println("---------------------------------------------");
+      SortSearch ms = new SortSearch(size);
+      System.out.println("Original: " + ms);
+    	ms.msort();
+    	System.out.println("Sorted: " + ms);
     }
 }
