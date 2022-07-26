@@ -25,8 +25,8 @@ public class SortSearchDriver {
     	// Uncomment these to test part 3
     
     	System.out.println("Original: " + ss);
-    	ss.sort();
-    	System.out.println("Sorted: " + ss);
+    	//ss.sort();
+    	//System.out.println("Sorted: " + ss);
 
       //Linear Search
       //System.out.println("(Linear) Index of -2: " + ss.linearSearch(-2));
@@ -52,6 +52,9 @@ public class SortSearchDriver {
 	    System.out.println(b);
 
 	    // test your merge routine here
-      System.out.println(ss.merge(a,b));
+      //System.out.println(ss.merge(a,b));
+
+    	ss.msort();
+    	System.out.println("Sorted: " + ss);
     }
 }
