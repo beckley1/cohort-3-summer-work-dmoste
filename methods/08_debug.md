@@ -11,35 +11,35 @@ Alicia Wade, Marieke Thomas, Erwin Lara, David Moste
 ```{java}
 public static int fib(int n){
     return fib(n-1)+fib(n-2);
-  }
+}
 ```
 
 Students should run the code. Observe what happens (stack overflow error).
 
 Run code together in [javatutor](https://pythontutor.com/java.html#mode=edit).
 
-Discuss with partner: What is happening to the value of n? What should happen to it?
+**Discuss with partner:** What is happening to the value of n? What should happen to it?
 
-Now code out this:
+**Now code out this:**
 ```{java}
 public static int fib(int n){
-    if(n == 0 && n == 1){
-      return n;
-    }else{return fib(n-1)+fib(n-2)}
-  }
+  if(n == 0 && n == 1){
+    return n;
+  }else{return fib(n-1)+fib(n-2)}
+}
 ```
 
-Rubber duck: Students should go through the code and add a comment for each line
+**Rubber duck:** Students should go through the code and add a comment for each line
 
-Discuss: What comment did you put for line 16? What is the error with line 16?
+**Discuss:** What comment did you put for line 16? What is the error with line 16?
 
 Fix code to be working (see below for working code)
 
-Trace diagram: In pairs, students go through the code and draw a trace diagram for fib(5)
+**Trace diagram:** In pairs, students go through the code and draw a trace diagram for fib(5)
 
 
 ***
-WORKING RECURSIVE FIBONACCI CODE
+### WORKING RECURSIVE FIBONACCI CODE
 ```{java}
 // nth Fibonacci number generator
 
