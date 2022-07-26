@@ -256,9 +256,7 @@ public class SortSearch{
       left = mergeSort(left);
       right = mergeSort(right);
 
-      list = merge(left, right);
-
-      return list;
+      return merge(left, right);
     }
   }
 

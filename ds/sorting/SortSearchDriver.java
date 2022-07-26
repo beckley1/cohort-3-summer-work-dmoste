@@ -12,7 +12,7 @@ public class SortSearchDriver {
     long end;
     
     SortSearch ss = new SortSearch(size);
-    //System.out.println(ss);
+    System.out.println(ss);
     
       
     // Uncomment these to test part 2
@@ -27,11 +27,11 @@ public class SortSearchDriver {
     // Uncomment these to test part 3
   
     System.out.println("Original: " + ss);
-    //start = System.currentTimeMillis();
+    start = System.currentTimeMillis();
     ss.sort();
-    //end = System.currentTimeMillis();
+    end = System.currentTimeMillis();
     System.out.println("Sorted: " + ss);
-    //System.out.println("Elapsed Time for Selection Sort: " + (end - start));
+    System.out.println("Elapsed Time for Selection Sort: " + (end - start));
 
     //Linear Search
     System.out.println("(Linear) Index of -2: " + ss.linearSearch(-2));
@@ -62,10 +62,10 @@ public class SortSearchDriver {
     System.out.println("---------------------------------------------");
     SortSearch ms = new SortSearch(size);
     System.out.println("Original: " + ms);
-    //start = System.currentTimeMillis();
+    start = System.currentTimeMillis();
     ms.msort();
-    //end = System.currentTimeMillis();
+    end = System.currentTimeMillis();
     System.out.println("Sorted: " + ms);
-    //System.out.println("Elapsed Time for Merge Sort: " + (end - start));
+    System.out.println("Elapsed Time for Merge Sort: " + (end - start));
   }
 }
