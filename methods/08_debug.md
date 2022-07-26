@@ -8,7 +8,7 @@ Alicia Wade, Marieke Thomas, Erwin Lara, David Moste
 
 
 ### ACTIVITY: Give students the code with errors:
-```{java}
+```java
 public static int fib(int n){
   return fib(n-1)+fib(n-2);
 }
@@ -21,7 +21,7 @@ Run code together in [javatutor](https://pythontutor.com/java.html#mode=edit).
 **Discuss with partner:** What is happening to the value of n? What should happen to it?
 
 **Now code out this:**
-```{java}
+```java
 public static int fib(int n){
   if(n == 0 && n == 1){
     return n;
@@ -42,7 +42,7 @@ Fix code to be working (see below for working code)
 
 ***
 ### WORKING RECURSIVE FIBONACCI CODE
-```{java}
+```java
 // nth Fibonacci number generator
 
 public class Fib
