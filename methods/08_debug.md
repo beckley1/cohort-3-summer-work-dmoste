@@ -10,7 +10,7 @@ Alicia Wade, Marieke Thomas, Erwin Lara, David Moste
 ### ACTIVITY: Give students the code with errors:
 ```{java}
 public static int fib(int n){
-    return fib(n-1)+fib(n-2);
+  return fib(n-1)+fib(n-2);
 }
 ```
 
