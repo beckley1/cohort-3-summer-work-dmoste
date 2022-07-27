@@ -2,7 +2,7 @@
 David Moste
 
 ## Lesson
-Introduction to Functions: The lesson revolves around students building up functions that will eventually allow for the creation of a diamond shape. First students build the ability to create a single step, then an entire side, then a full diamond.
+[Introduction to Functions](https://github.com/hunter-teacher-cert/cohort-3-summer-work-dmoste/blob/master/methods/collab_lesson.pdf): The lesson revolves around students building up functions that will eventually allow for the creation of a diamond shape. First students build the ability to create a single step, then an entire side, then a full diamond.
 
 ### Collaboration Technique
 Paired Programming
