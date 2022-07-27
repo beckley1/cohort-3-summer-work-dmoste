@@ -16,7 +16,7 @@ public class ExpressionTree{
 
   //You must write this method:
   //Return a string representation of the tree
-  //A value is just hte string of the value
+  //A value is just the string of the value
   //An operation has parenthesis around
   //such as
   //"12.5"  //just a value
