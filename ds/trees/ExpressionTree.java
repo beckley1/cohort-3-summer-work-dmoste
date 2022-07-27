@@ -20,14 +20,17 @@ public class ExpressionTree{
   //"(12.5*(5.0-8.0)) //a tree that is the product of the previous two example trees
   //"(((2.0+1.0)/(8.0*0.43)) - 1.0)" //a tree with more
   public String toString(){
-    int leftDepth = 0;
-    int rightDepth = 0;
-    String temp = new String "";
-    
-    while(left != null){
-      
+    String temp = "";
+
+    if(isOperator()){
+      temp += "(" + left.toString();
+      temp += operator;
+      temp += right.toString() + ")";
+    }else{
+      temp += value;
     }
-    return "replace this with your code";
+
+    return temp;
   }
 
 
@@ -54,7 +57,7 @@ public class ExpressionTree{
   //Return true when the node is a value, false when it is an operator
   //when the children are null, the current tree is an operator
   private boolean isValue(){
-    return left==null && right ==null;
+    return left == null && right == null;
   }
 
   //Return false when the node is a value, true when it is an operator
