@@ -1,4 +1,4 @@
-# Collaboration
+# Collaboration :handshake:
 David Moste
 
 ## Lesson
@@ -16,7 +16,7 @@ One way to check if the grouping is working is to use red, yellow, and green lig
 ### Groupwork Instructions
 * Driver is the only one typing
 * Driver only types what the navigator says to type
-* Driver and navigator will switch when prompted by the teacher
+* Driver and navigator will switch when prompted by the teacher (about every 10 minutes)
 * Both participants should be able to explain what was typed
 * Use the red, yellow, and green lights to indicate your current progress/understanding
 
