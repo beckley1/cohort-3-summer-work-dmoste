@@ -7,7 +7,15 @@ public class ExpressionTree{
   //You must write this method:
   //Calculate the value of the entire tree
   public double evaluate(){
-    return 10000000000000.0;//replace this
+    double total = 0.0;
+
+    if(isValue()){
+      return value;
+    }else{
+      total += apply(left.evaluate(), right.evaluate(), operator);
+    }
+
+    return total;
   }
 
   //You must write this method:
@@ -22,12 +30,12 @@ public class ExpressionTree{
   public String toString(){
     String temp = "";
 
-    if(isOperator()){
+    if(isValue()){
+      temp += value;
+    }else{
       temp += "(" + left.toString();
       temp += operator;
       temp += right.toString() + ")";
-    }else{
-      temp += value;
     }
 
     return temp;
@@ -55,7 +63,7 @@ public class ExpressionTree{
   }
 
   //Return true when the node is a value, false when it is an operator
-  //when the children are null, the current tree is an operator
+  //when the children are null, the current tree is a value
   private boolean isValue(){
     return left == null && right == null;
   }
