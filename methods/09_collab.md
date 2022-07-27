@@ -5,7 +5,7 @@ David Moste
 [Introduction to Functions](https://github.com/hunter-teacher-cert/cohort-3-summer-work-dmoste/blob/master/methods/collab_lesson.pdf): The lesson revolves around students building up functions that will eventually allow for the creation of a diamond shape. First students build the ability to create a single step, then an entire side, then a full diamond.
 
 ### Collaboration Technique
-Paired Programming
+Pair Programming
 
 ### Benefits
 When introducing functions in computer science, the teacher is adding an extremely abstract concept to the students' toolbox. With this high level of abstraction, providing students with the opportunity to act as both a driver and a navigator gives them an opportunity to grapple with the abstraction as well as implement it.
