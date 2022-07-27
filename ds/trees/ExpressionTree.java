@@ -9,9 +9,9 @@ public class ExpressionTree{
   public double evaluate(){
     if(isValue()){
       return value;
-    }else{
-      return apply(left.evaluate(), right.evaluate(), operator);
     }
+    
+    return apply(left.evaluate(), right.evaluate(), operator);
   }
 
   //You must write this method:
@@ -26,9 +26,9 @@ public class ExpressionTree{
   public String toString(){
     if(isValue()){
       return "" + value;
-    }else{
-      return "(" + left.toString() + operator + right.toString() + ")";
     }
+    
+    return "(" + left.toString() + operator + right.toString() + ")";
   }
 
 
