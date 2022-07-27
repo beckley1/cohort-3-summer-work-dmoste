@@ -7,15 +7,11 @@ public class ExpressionTree{
   //You must write this method:
   //Calculate the value of the entire tree
   public double evaluate(){
-    double total = 0.0;
-
     if(isValue()){
       return value;
     }else{
-      total += apply(left.evaluate(), right.evaluate(), operator);
+      return apply(left.evaluate(), right.evaluate(), operator);
     }
-
-    return total;
   }
 
   //You must write this method:
@@ -28,15 +24,11 @@ public class ExpressionTree{
   //"(12.5*(5.0-8.0)) //a tree that is the product of the previous two example trees
   //"(((2.0+1.0)/(8.0*0.43)) - 1.0)" //a tree with more
   public String toString(){
-    String temp = "";
-
     if(isValue()){
       return "" + value;
     }else{
-      temp += "(" + left.toString() + operator + right.toString() + ")";
+      return "(" + left.toString() + operator + right.toString() + ")";
     }
-
-    return temp;
   }
 
 
