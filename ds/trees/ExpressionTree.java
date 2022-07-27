@@ -33,9 +33,7 @@ public class ExpressionTree{
     if(isValue()){
       temp += value;
     }else{
-      temp += "(" + left.toString();
-      temp += operator;
-      temp += right.toString() + ")";
+      temp += "(" + left.toString() + operator + right.toString() + ")";
     }
 
     return temp;
