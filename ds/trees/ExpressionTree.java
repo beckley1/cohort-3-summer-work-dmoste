@@ -56,8 +56,7 @@ public class ExpressionTree{
   public ExpressionTree(char op, ExpressionTree l){
     if(op == 's'){
       operator = '^';
-    }
-    else{
+    }else{
       operator = op;
     }
 
