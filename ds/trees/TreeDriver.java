@@ -82,11 +82,23 @@ public class TreeDriver{
     (((1.0+1.0)*(1.0/2.0))+1.0) is equal to 2.0
     */
 
+    // Exponent and square root functionality tests
     ExpressionTree j = new ExpressionTree('^',five, two);
+    ExpressionTree k = new ExpressionTree('^',c, three);
+    ExpressionTree l = new ExpressionTree('s',five);
+    ExpressionTree m = new ExpressionTree('s',e);
+    
     System.out.println(j.toString() + " is equal to " + j.evaluate());
-
-    ExpressionTree k = new ExpressionTree('s',five);
     System.out.println(k.toString() + " is equal to " + k.evaluate());
+    System.out.println(l.toString() + " is equal to " + l.evaluate());
+    System.out.println(m.toString() + " is equal to " + m.evaluate());
 
+    /*
+    output:
+    (5.0^2.0) is equal to 25.0
+    ((3.0*4.0)^3.0) is equal to 1728.0
+    (5.0^0.5) is equal to 2.23606797749979
+    (((3.0*4.0)/2.0)^0.5) is equal to 2.449489742783178
+    */
   }
 }
