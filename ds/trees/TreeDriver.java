@@ -82,6 +82,7 @@ public class TreeDriver{
     (((1.0+1.0)*(1.0/2.0))+1.0) is equal to 2.0
     */
 
+    System.out.println("\n------------Additional Tests------------\n");
     // Exponent and square root functionality tests
     ExpressionTree j = new ExpressionTree('^',five,two);
     ExpressionTree k = new ExpressionTree('^',c,three);
