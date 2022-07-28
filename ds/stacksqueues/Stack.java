@@ -53,7 +53,15 @@ public class Stack{
   }
 
   public String toString(){
-    return "";
+    String temp = "Bottom: [";
+
+    for(int i = 0; i < data.size()-1; i++){
+      temp += data.get(i) + ", ";
+    }
+
+    temp += data.get(data.size()-1) + "] :Top";
+    
+    return temp;
   }
 
 }
