@@ -4,6 +4,9 @@ public class Queue{
   // Place private instance variables here
 
   // Place constructors here - A constructor with no parameters
+  public Queue(){
+    
+  }
 
   // Place methods here
 
