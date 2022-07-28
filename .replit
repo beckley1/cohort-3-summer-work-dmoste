@@ -1,2 +1,2 @@
 language="bash"
-run="cd ds/trees;javac *.java; java TreeDriver"
+run="cd ds/stacksqueues;javac *.java; java Driver"
