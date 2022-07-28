@@ -36,6 +36,10 @@ public class Queue{
   public boolean isFull(){
     return false;
   }
+
+  public String toString(){
+    return "";
+  }
     
 
 }
