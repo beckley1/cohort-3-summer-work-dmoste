@@ -52,6 +52,19 @@ public class ExpressionTree{
     right = r;
   }
 
+  //Operator for square root functionality
+  public ExpressionTree(char op, ExpressionTree l){
+    if(op == 's'){
+      operator = '^';
+    }
+    else{
+      operator = op;
+    }
+
+    left = l;
+    right = new ExpressionTree(0.5);
+  }
+
   //Return true when the node is a value, false when it is an operator
   //when the children are null, the current tree is a value
   private boolean isValue(){
@@ -72,6 +85,8 @@ public class ExpressionTree{
     return a-b;
    }else if(op == '*'){
     return a*b;
+   }else if(op == '^'){
+     return Math.pow(a,b);
    }else{ //  if(op == '/'){ //or any invalid operators
     return a/b;
    }

@@ -82,5 +82,11 @@ public class TreeDriver{
     (((1.0+1.0)*(1.0/2.0))+1.0) is equal to 2.0
     */
 
+    ExpressionTree j = new ExpressionTree('^',five, two);
+    System.out.println(j.toString() + " is equal to " + j.evaluate());
+
+    ExpressionTree k = new ExpressionTree('s',five);
+    System.out.println(k.toString() + " is equal to " + k.evaluate());
+
   }
 }
