@@ -83,8 +83,8 @@ public class TreeDriver{
     */
 
     // Exponent and square root functionality tests
-    ExpressionTree j = new ExpressionTree('^',five, two);
-    ExpressionTree k = new ExpressionTree('^',c, three);
+    ExpressionTree j = new ExpressionTree('^',five,two);
+    ExpressionTree k = new ExpressionTree('^',c,three);
     ExpressionTree l = new ExpressionTree('s',five);
     ExpressionTree m = new ExpressionTree('s',e);
     
