@@ -28,7 +28,7 @@ public class ExpressionTree{
       return "" + value;
     }
     
-    return "(" + left.toString() + operator + right.toString() + ")";
+    return "(" + left + operator + right + ")";
   }
 
 
