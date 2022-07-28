@@ -53,8 +53,8 @@ public class Stack{
   }
 
   public String toString(){
-    String temp = "Top of Stack\n";
-    
+    String temp = "\n---Current State of Stack---\nTop of Stack\n";
+
     for(int i = data.size()-1; i >= 0; i--){
       temp += data.get(i) + "\n";
     }
