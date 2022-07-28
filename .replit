@@ -1,2 +1,2 @@
 language="bash"
-run="cd ds/ds_design;javac *.java; java Driver"
+run="cd ds/trees;javac *.java; java TreeDriver"
