@@ -8,6 +8,8 @@ public class Driver{
 	  Stack s = new Stack();
     
     System.out.println("Stack Empty: " + s.isEmpty());
+    System.out.println("\n---Current State of Stack---");
+    System.out.println(s + "\n");
     s.push(5);
     s.push(10);
     s.push(12);
