@@ -2,7 +2,7 @@
 Since stacks are a LIFO structure, the list only ever gets accessed from one end.
 This means we don't have to worry about shifting items as new items are added or removed.
 So for ease, we chose to use an array list.
-  */
+*/
 
 import java.io.*;
 import java.util.*;
