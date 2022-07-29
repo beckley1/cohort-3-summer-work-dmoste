@@ -28,9 +28,7 @@ public class Stack{
 
   // int top() - return but do not remove the top value from the stack
   public int top(){
-    int value = data.get(data.size()-1);
-
-    return value;
+    return data.get(data.size()-1);
   }
 
   // boolean isEmpty() - return true of the stack is empty, false otherwise
