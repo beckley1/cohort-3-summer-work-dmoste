@@ -1,3 +1,5 @@
+import java.io.*;
+import java.util.*;
 
 public class Queue{
 
@@ -20,8 +22,8 @@ public class Queue{
 
   // int dequeue() - remove and return the top value from front of the queue
   public int dequeue(){
-    int value = data.get(data.size()-1);
-    data.remove(data.size()-1);
+    int value = data.get(queueLength-1);
+    data.remove(queueLength-1);
     queueLength --;
     
     return value;
@@ -29,7 +31,7 @@ public class Queue{
 
   // int front() - return but do not remove the top value from the front of the queue
   public int front(){
-    return data.get(data.size()-1);
+    return data.get(queueLength-1);
   }
 
   // boolean isEmpty() - return true of the queue is empty, false otherwise
@@ -52,6 +54,10 @@ public class Queue{
   }
 
   public String toString(){
+    if(queueLength == 0){
+      return "\n---Current State of Queue---\nnull\n";
+    }
+    
     return "\n---Current State of Queue---\n" + data + "\n";
   }
     

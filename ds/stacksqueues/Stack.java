@@ -22,8 +22,8 @@ public class Stack{
 
   // int pop() - remove and return the top value from the stack
   public int pop(){
-    int value = data.get(data.size()-1);
-    data.remove(data.size()-1);
+    int value = data.get(stackSize-1);
+    data.remove(stackSize-1);
     stackSize--;
 
     return value;
@@ -31,7 +31,7 @@ public class Stack{
 
   // int top() - return but do not remove the top value from the stack
   public int top(){
-    return data.get(data.size()-1);
+    return data.get(stackSize-1);
   }
 
   // boolean isEmpty() - return true of the stack is empty, false otherwise
@@ -56,7 +56,7 @@ public class Stack{
   public String toString(){
     String temp = "\n---Current State of Stack---\nTop of Stack\n";
 
-    for(int i = data.size()-1; i >= 0; i--){
+    for(int i = stackSize-1; i >= 0; i--){
       temp += data.get(i) + "\n";
     }
 

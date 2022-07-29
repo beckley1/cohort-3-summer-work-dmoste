@@ -84,7 +84,7 @@ public class LinkedList{
       walker = walker.getNext();
     }
 
-    temp += "null";
+    temp += "front";
     
 	return temp;
   }
