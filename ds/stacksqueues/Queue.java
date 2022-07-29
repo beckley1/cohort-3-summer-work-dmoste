@@ -3,6 +3,7 @@ public class Queue{
 
   // Place private instance variables here
   LinkedList data;
+  int queueLength = 0;
 
   // Place constructors here - A constructor with no parameters
   public Queue(){
@@ -14,12 +15,14 @@ public class Queue{
   // void enqueue(int value) - add value to the end of the queue
   public void enqueue(int value){
     data.add(value);
+    queueLength ++;
   }
 
   // int dequeue() - remove and return the top value from front of the queue
   public int dequeue(){
     int value = data.get(data.size()-1);
     data.remove(data.size()-1);
+    queueLength --;
     
     return value;
   }
@@ -31,7 +34,7 @@ public class Queue{
 
   // boolean isEmpty() - return true of the queue is empty, false otherwise
   public boolean isEmpty(){
-    if(data.size() < 1){
+    if(queueLength < 1){
       return true;
     }
 
@@ -40,7 +43,7 @@ public class Queue{
 
   // int size() - return the number of elements currently in the queue
   public int size(){
-    return data.size();
+    return queueLength;
   }
 
   // boolean isFull() - returns true if the queue is full, false otherwise - only implement this if you use an array for implementation
@@ -49,7 +52,7 @@ public class Queue{
   }
 
   public String toString(){
-    return data.toString();
+    return "\n---Current State of Queue---\n" + data + "\n";
   }
     
 

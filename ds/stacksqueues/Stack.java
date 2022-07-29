@@ -5,6 +5,7 @@ public class Stack{
 
   // Place private instance variables here
   private ArrayList<Integer> data;
+  int stackSize = 0;
 
   // Place constructors here - A constructor with no parameters
   public Stack(){
@@ -16,12 +17,14 @@ public class Stack{
   // void push(int value) - add value to the top of the stack
   public void push(int value){
     data.add(value);
+    stackSize++;
   }
 
   // int pop() - remove and return the top value from the stack
   public int pop(){
     int value = data.get(data.size()-1);
     data.remove(data.size()-1);
+    stackSize--;
 
     return value;
   }
@@ -33,7 +36,7 @@ public class Stack{
 
   // boolean isEmpty() - return true of the stack is empty, false otherwise
   public boolean isEmpty(){
-    if(data.size() < 1){
+    if(stackSize < 1){
       return true;
     }
 
@@ -42,7 +45,7 @@ public class Stack{
 
   // int size() - return the number of elements currently in the stack
   public int size(){
-    return data.size();
+    return stackSize;
   }
 
   // boolean isFull() - returns true if the stack is full, false otherwise - only implement this if you use an array for implementation
