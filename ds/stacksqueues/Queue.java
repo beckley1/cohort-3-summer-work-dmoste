@@ -2,18 +2,20 @@
 Due to the FIFO nature of queues, I decided that using linked lists made more sense than array lists.
 Since ques need to add to one end and remove from the other end, using a linked list gets around the need to shift all the items whenever an item is added/removed.
 */
+
 import java.io.*;
 import java.util.*;
 
 public class Queue{
 
   // Place private instance variables here
-  LinkedList data;
-  int queueLength = 0;
+  private LinkedList data;
+  private int queueLength;
 
   // Place constructors here - A constructor with no parameters
   public Queue(){
     data = new LinkedList();
+    queueLength = 0;
   }
 
   // Place methods here

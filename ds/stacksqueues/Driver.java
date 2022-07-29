@@ -9,6 +9,7 @@ public class Driver{
     
     System.out.println("Stack Empty: " + s.isEmpty());
     System.out.println(s);
+    System.out.println("Popped Stack: " + s.pop());
     System.out.println("Pushing 5 to Stack");
     s.push(5);
     System.out.println("Pushing 10 to Stack");
@@ -31,6 +32,7 @@ public class Driver{
 	  Queue q = new Queue();
     System.out.println("Queue Empty: " + q.isEmpty());
     System.out.println(q);
+    System.out.println("Dequeued: " + q.dequeue());
     System.out.println("Queueing 5");
     q.enqueue(5);
     System.out.println("Queueing 10");

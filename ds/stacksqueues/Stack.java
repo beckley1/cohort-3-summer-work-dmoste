@@ -1,3 +1,9 @@
+/*
+Since stacks are a LIFO structure, the list only ever gets accessed from one end.
+This means we don't have to worry about shifting items as new items are added or removed.
+So for ease, we chose to use an array list.
+  */
+
 import java.io.*;
 import java.util.*;
 
@@ -5,11 +11,12 @@ public class Stack{
 
   // Place private instance variables here
   private ArrayList<Integer> data;
-  int stackSize = 0;
+  private int stackSize;
 
   // Place constructors here - A constructor with no parameters
   public Stack(){
     data = new ArrayList<Integer>();
+    stackSize = 0;
   }
 
   // Place methods here
