@@ -1,3 +1,7 @@
+/*
+Due to the FIFO nature of queues, I decided that using linked lists made more sense than array lists.
+Since ques need to add to one end and remove from the other end, using a linked list gets around the need to shift all the items whenever an item is added/removed.
+*/
 import java.io.*;
 import java.util.*;
 
@@ -22,16 +26,25 @@ public class Queue{
 
   // int dequeue() - remove and return the top value from front of the queue
   public int dequeue(){
-    int value = data.get(queueLength-1);
-    data.remove(queueLength-1);
-    queueLength --;
+    int value = -1;
+    
+    if(queueLength > 0){
+      value = data.get(queueLength-1);
+      data.remove(queueLength-1);
+      queueLength --; 
+    }
     
     return value;
   }
 
   // int front() - return but do not remove the top value from the front of the queue
   public int front(){
-    return data.get(queueLength-1);
+    int value = -1;
+
+    if(queueLength > 0){
+      value = data.get(queueLength-1);
+    }
+    return value;
   }
 
   // boolean isEmpty() - return true of the queue is empty, false otherwise

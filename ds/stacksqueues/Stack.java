@@ -22,16 +22,26 @@ public class Stack{
 
   // int pop() - remove and return the top value from the stack
   public int pop(){
-    int value = data.get(stackSize-1);
-    data.remove(stackSize-1);
-    stackSize--;
+    int value = -1;
+
+    if(stackSize > 0){
+      value = data.get(stackSize-1);
+      data.remove(stackSize-1);
+      stackSize--; 
+    }
 
     return value;
   }
 
   // int top() - return but do not remove the top value from the stack
   public int top(){
-    return data.get(stackSize-1);
+    int value = -1;
+
+    if(stackSize > 0){
+      value = data.get(stackSize-1);
+    }
+    
+    return value;
   }
 
   // boolean isEmpty() - return true of the stack is empty, false otherwise
