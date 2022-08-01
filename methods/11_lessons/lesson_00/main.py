@@ -11,3 +11,11 @@ myArrow.show()
 
 myArrow.left()
 myArrow.show()
+
+print("----------------------------------")
+
+secondArrow = Arrow()
+secondArrow.show()
+
+secondArrow.right()
+secondArrow.show()
