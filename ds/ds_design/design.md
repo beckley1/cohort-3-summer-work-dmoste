@@ -1,7 +1,10 @@
 # Phonebook Design Challenge
 
+## Associate Documents
+[Diagram]()
+
 ## Structure
-The pnhonebook will contain two structures:
+The phonebook will contain two structures:
 * An unsorted LinkedList
 * A sometimes sorted ArrayList
 
