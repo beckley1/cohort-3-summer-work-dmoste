@@ -1,7 +1,7 @@
 # Phonebook Design Challenge
 
 ## Associate Documents
-[Diagram]()
+[Diagram](https://github.com/hunter-teacher-cert/cohort-3-summer-work-dmoste/blob/master/ds/ds_design/design.pdf)
 
 ## Structure
 The phonebook will contain two structures:
