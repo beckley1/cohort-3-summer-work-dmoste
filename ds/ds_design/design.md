@@ -1,0 +1,18 @@
+# Phonebook Design Challenge
+
+## Structure
+The pnhonebook will contain two structures:
+* An unsorted LinkedList
+* A sorted ArrayList
+
+### add
+The add method will simply add the new person to the front of a LinkedList and the end of an ArrayList. This has a constant runtime.
+
+### find
+We would use a mergeSort to sort the ArrayList and then a binary search to find the value. This will run in nLog(n).
+
+### remove
+Remove can be done through any type of search and remove. This would need to be applied to both the LinkedList and the ArrayList.
+
+### printList
+printList will run through the ArrayList and print every element.
