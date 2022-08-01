@@ -1,2 +1,2 @@
-language="bash"
-run="cd ds/stacksqueues;javac *.java; java Driver"
+language="python"
+run="python methods/11_lessons/lesson_00/main.py"
