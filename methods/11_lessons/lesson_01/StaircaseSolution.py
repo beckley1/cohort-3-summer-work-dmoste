@@ -18,7 +18,7 @@ def step():
   arrow.forward()
 
 ## Build a function that creates a staircase
-## A sistaircasede looks like the following:
+## A staircase looks like the following:
 ##         ----
 ##         |
 ##     ----|
@@ -36,7 +36,7 @@ def staircase():
 
 ## CHALLENGE
 ## Build a function that creates an entire diamond.
-## This should be fours sides placed together.
+## This should be four sides placed together.
 def diamond():
   ## Replace with diamond() code
   pass
