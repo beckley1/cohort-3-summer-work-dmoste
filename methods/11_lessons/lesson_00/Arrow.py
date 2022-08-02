@@ -15,7 +15,6 @@ class Arrow:
     elif self.currentState == "→":
       self.currentState = "↑"
 
-## The expected function created by students to make a right turn
   def right(self):
     self.left()
     self.left()
