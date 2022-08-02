@@ -9,7 +9,13 @@ arrow = Arrow()
 ## |
 def step():
   ## Replace with step() code
-  pass
+  arrow.forward()
+  arrow.forward()
+  arrow.right()
+  arrow.forward()
+  arrow.forward()
+  arrow.forward()
+  arrow.forward()
 
 ## Build a function that creates a staircase
 ## A sistaircasede looks like the following:
@@ -22,7 +28,11 @@ def step():
 ## |
 def staircase():
   ## Replace with staircase() code
-  pass
+  step()
+  arrow.left()
+  step()
+  arrow.left()
+  step()
 
 ## CHALLENGE
 ## Build a function that creates an entire diamond.
@@ -32,6 +42,8 @@ def diamond():
   pass
 
 def main():
+  arrow.left()
+  staircase()
   arrow.printRoute()
 
 main()
